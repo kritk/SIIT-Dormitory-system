@@ -49,3 +49,42 @@ nav{
 
 
 }
+
+.form-group{
+	margin-left: 150px;
+
+}
+.radio-button{
+	margin-left: 150px;
+
+}
+.radio{
+	margin-left: 20px;
+}
+
+
+#form-line{
+	margin-left: 60px;
+}
+
+#name{
+	padding-right: 20px;
+	margin-left: 15px;
+}
+#surname{
+	padding-right: 100px;
+	margin-left: 15px;
+
+}
+#studentid{
+	
+	margin-left: 15px;
+}
+
+.dropdown{
+	margin-left: 15px;
+}
+#datetime{
+	margin-left: 15px;
+
+}
