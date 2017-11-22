@@ -30,6 +30,10 @@ h1{
 	color: #fff;
 
 }
+h2{
+	text-align: center;
+
+}
 
 .nav-item{
 	font-color: #000000;
@@ -49,13 +53,20 @@ nav{
 
 
 }
+.button{
+	margin-left: 600px;
+}
 
 .form-group{
-	margin-left: 150px;
-
+	
+	margin-left: 20;
 }
+.form-inline{
+	margin-left: 200px;
+}
+
 .radio-button{
-	margin-left: 150px;
+	margin-left: 200px;
 
 }
 .radio{
@@ -68,17 +79,23 @@ nav{
 }
 
 #name{
-	padding-right: 20px;
-	margin-left: 15px;
+	padding-right: 30px;
+	margin-left: 56px;
 }
 #surname{
 	padding-right: 100px;
 	margin-left: 15px;
 
 }
+#room{
+	margin-left: 60px;
+}
+.room{
+	margin-left: 16px;
+}
 #studentid{
 	
-	margin-left: 15px;
+	margin-left: 23px;
 }
 
 .dropdown{
@@ -87,4 +104,24 @@ nav{
 #datetime{
 	margin-left: 15px;
 
+}
+.check{
+	margin-left: 220px;
+	
+
+}
+.checkbox{
+	margin-top: 10px;
+}
+.combocheckbox{
+	margin-top: 30px;
+}
+#comment{
+	padding-right: 100px;
+}
+.btn{
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }

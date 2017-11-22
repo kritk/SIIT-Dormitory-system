@@ -28,9 +28,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">News</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Reporting Problem <span class="sr-only">(current)</span></a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link" href="contract.html">Create Contract</a>
               </li>
@@ -38,7 +36,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="booking.html">Create Booking</a>
               </li>
-
+               <li class="nav-item active">
+                <a class="nav-link" href="#">Reporting Problem <span class="sr-only">(current)</span></a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact us</a>
               </li>
@@ -65,11 +65,11 @@
     <div>
         <form class="form-inline ">
           <div class="form-group" >
-            <label >Name(ชื่อ)</label>
+            <label >Name(ชื่อ) :</label>
             <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group" >
-            <label >Surname(นามสกุล)</label>
+            <label >Surname(นามสกุล) :</label>
             <input type="text" class="form-control" id="surname">
           </div>
         </form>
@@ -78,25 +78,34 @@
     <div>
         <form class="form-inline ">
           <div class="form-group" >
-            <label >Student ID</label>
-            <input type="text" class="form-control" id="studentid">
+            <label >Building (อาคาร) :</label>
+            <input type="text" class="form-control" id="datetime">
+          </div>
+           <div class="form-group" >
+            <label class="room">Room (ห้อง) :</label>
+            <input type="text" class="form-control" id="room">
           </div>
 
-                <div class="form-group">
-                  <label >วันและเวลาที่แจ้ง</label>
-                  <input class="form-control" type="datetime-local" value="2016-10-19T13:45:00" id="datetime">
-                </div>
+                
         </form>
     </div>
 
     <div>
         <form class="form-inline ">
+          <div class="form-group">
+                  <label >วันและเวลาที่แจ้ง :</label>
+                  <input class="form-control" type="datetime-local" value="2016-10-19T13:45:00" id="datetime">
+          </div>
           <div class="form-group" >
-            <label >Tel.(เบอร์โทร)</label>
+            <label >Tel.(เบอร์โทร) :</label>
             <input type="text" class="form-control" id="name">
           </div>
-                  <div class="form-group" >
-            <label >Status(สถานะ) :</label>
+        </form>
+    </div>
+    <div>
+      <form class="form-inline ">
+        <div class="form-group" >
+            <label >Status(สถานะผู้แจ้ง) :</label>
                   <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  สถานะ
@@ -107,14 +116,118 @@
                           <a class="dropdown-item" href="#">Staff(บุคลากร)</a>
                         </div>
                   </div>
-                  </div>
+        </div>
+         <div class="form-group">
+                  <label >Appointment on(date) วันนัดหมายและเวลา :</label>
+                  <input class="form-control" type="datetime-local" value="2016-10-19T13:45:00" id="datetime">
+                </div>
         </form>
     </div>
+    <!--Check box here-->
+    <div class="check">
+      <div class="checkbox">
+        <label><input type="checkbox" value="" >I allow technicians(s)</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="" >In case of repairing</label>
+      </div>
+    </div>
+    <div>
+      <h2 > Repair Items(รายการที่ต้องการซ่อม)</h2>
+    </div>
+    <!--Combo checkbox here-->
+    <div class="combocheckbox">
+      <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+      </form>
+       <form class="check">
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      </form>
+    </div>
+
+     <!--Form inline goes here again-->
+    <div>
+        <form class="form-inline ">
+          <div class="form-group" >
+            <label >Light bulbs at(หลอดไฟ ระบุ แบบ) :</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+        </form>
+    </div>
+    <div>
+        <form class="form-inline ">
+          <div class="form-group" >
+            <label >Light switches broken at(สวิตซ์ไฟชำรุดที่) :</label>
+            <input type="text" class="form-control" id="surname">
+          </div>
+        </form>
+    </div>
+    <div>
+        <form class="form-inline ">
+          <div class="form-group">
+                <label for="comment">Other(อื่นๆ) :</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+        </form>
+    </div>
+    
+
+
 
 
  
-
-  <button type="submit" class="btn btn-default">Submit</button>
+    <div class="button ">
+      <form>
+        <button type="submit" class="btn btn-default">Confirm</button>
+      </form>
+    </div>
+  
 
      
    
