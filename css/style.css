@@ -85,6 +85,22 @@ nav{
 
 }
 
+.card-img-top{
+
+	width: 315px;
+	border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    border-bottom: 5px;
+    border-color: #fff;
+    border-style: solid;
 
 
+}
 
+.row{
+	margin-bottom: 20px;
+
+
+	
+}

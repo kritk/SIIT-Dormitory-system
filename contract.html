@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <title>Login</title>
+    <title>Contract</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-     <link rel="stylesheet" type="text/css" href="css/login.css">
+     <link rel="stylesheet" type="text/css" href="css/contract.css">
 
   </head>
   <body>
@@ -50,6 +50,105 @@
             </ul>
           </div>
         </nav>
+    <div class="backgroundmain">
+      <div class = "Form1">
+        <div>
+          <h2>Student Information</h2>
+        </div>
+        <div class="radio-button">
+                <label class="radio"><input type="radio" value="Cmale" checked >Mr.</label>
+                <label class="radio"><input type="radio" value="Cfemale">Miss</label>
+        </div>
+        <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >Name(ชื่อ):</label>
+                    <input type="text" class="form-control" size="20" name="Cname" id="name">
+                  </div>
+                  <div class="form-group" >
+                    <label >Surname(นามสกุล):</label>
+                    <input type="text" class="form-control"  size="25" name="Csurname" id="surname">
+                  </div>
+
+
+        </form>
+        <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >Program :</label>
+                    <div class="dropdown">
+                          <select class="selectpicker">
+                          <option>Mustard</option>
+                          <option>Ketchup</option>
+                          <option>Relish</option>
+                          </select>
+                    </div>       
+                  </div>
+                  <div class="form-group" >
+                    <label >National Identify Card/Passport(for foreign students) number :</label>
+                    <input type="text" class="form-control" size="20" name="Cidcard" id="idcard">
+                  </div>
+
+        </form>
+        <form class="form-inline ">
+          <div class="form-group">
+             <label >Date of Birth :</label>
+             <input class="form-control" type="date" value="2016-10-19" id="age">
+          </div>
+          <div class="form-group" >
+                    <label >Age :</label>
+                    <input type="text" class="form-control" size="5" name="Cage" id="age">
+          </div>
+        </form>
+        <!--Address start here-->
+         <div>
+          <h2>Address</h2>
+        </div>
+        <form class="form-inline ">
+                      <div class="form-group">
+                            <label for="comment">Address :</label>
+                            <div class = "address">
+                            <textarea class="form-control" rows="5" cols="40" id="Caddress1"></textarea>
+                            </div>
+                      </div>
+                       <div class="form-group">
+                            <label for="comment">Currently Address :</label>
+                            <div class = "address">
+                            <textarea class="form-control" rows="5" cols="40" id="Caddress2"></textarea>
+                            </div>
+                      </div>
+        </form>
+        <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >Telephone :</label>
+                    <input type="text" class="form-control" size="20" name="Ctel" id="name">
+                  </div>
+                  <div class="form-group" >
+                    <label >Cell phone :</label>
+                    <input type="text" class="form-control"  size="15" name="Cmobiletel" id="surname">
+                  </div>
+                  <div class="form-group" >
+                    <label >E-mail :</label>
+                    <input type="text" class="form-control"  size="25" name="Ce-mail" id="surname">
+                  </div>
+
+
+        </form>
+
+
+
+
+       
+
+
+      </div>
+
+      <div>
+      <form class ="button">
+        <button type="submit" class="btn btn-primary">Confirm</button>
+      </form>
+      </div>
+
+      
+    </div>
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <title>Login</title>
+    <title>Booking</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-     <link rel="stylesheet" type="text/css" href="css/report.css">
+     <link rel="stylesheet" type="text/css" href="css/booking.css">
 
   </head>
   <body>
@@ -51,53 +51,140 @@
           </div>
         </nav>
        <div class="backgroundmain">
-   <!--Check box goes here-->
-   <div class="radio-button">
-<label class="radio"><input type="radio" name="optradio">Mr.</label>
-<label class="radio"><input type="radio" name="optradio">Miss</label>
-  </div>
-
-  <!--Form inline goes here-->
-<form class="form-inline ">
-  <div class="form-group" >
-    <label >Name</label>
-    <input type="text" class="form-control" id="name">
-  </div>
-  <div class="form-group" >
-    <label >Surname</label>
-    <input type="text" class="form-control" id="surname">
-  </div>
-
-</form>
-
-<form class="form-inline ">
-  <div class="form-group" >
-    <label >Student ID</label>
-    <input type="text" class="form-control" id="studentid">
-  </div>
-  <div class="form-group" >
-    <label >Cirriculum :</label>
-          <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          CPE
-        </button>
-                <div class="dropdown-menu" >
-                  <a class="dropdown-item" href="#">MT</a>
-                  <a class="dropdown-item" href="#">CHE</a>
-                  <a class="dropdown-item" href="#">CE</a>
-                </div>
+        <div class="Form1">
+          <div>
+            <h2>Student Information</h2>
           </div>
-  </div>
+          
+       
+   <!--Check box goes here-->
+                   <div class="radio-button">
+                <label class="radio"><input type="radio" name="optradio" checked >Mr.</label>
+                <label class="radio"><input type="radio" name="optradio">Miss</label>
+                  </div>
 
-</form>
+                  <!--Form inline goes here-->
 
+                <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >Name(ชื่อ):</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group" >
+                    <label >Surname(นามสกุล):</label>
+                    <input type="text" class="form-control" id="surname">
+                  </div>
 
+                </form>
 
- <div class="button ">
-      <form>
-        <button type="submit" class="btn btn-default">Confirm</button>
+                <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >Student ID :</label>
+                    <input type="text" class="form-control" id="studentid">
+                  </div>
+
+                  <div class="form-group" >
+                    <label >Cirriculum :</label>
+                    <div class="dropdown">
+                          <select class="selectpicker">
+                          <option>Mustard</option>
+                          <option>Ketchup</option>
+                          <option>Relish</option>
+                          </select>
+                    </div>       
+                  </div>
+                </form>
+                <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >School :</label>
+                    <input type="text" class="form-control" id="school">
+                  </div>
+                  <div class="form-group" >
+                    <label >E-mail :</label>
+                    <input type="text" class="form-control" id="surname">
+                  </div>
+
+                </form>
+                <form class="form-inline ">
+                  <div class="form-group" >
+                    <label >Mobile Phone :</label>
+                    <input type="text" class="form-control" id="mobile">
+                  </div>
+                  <div class="form-group" >
+                    <label >Phone :</label>
+                    <input type="text" class="form-control" id="mobile">
+                  </div>
+                </form>
+
+     </div>
+     <!-- Form 2 start here -->
+     <div class="Form2">
+      <div>
+            <h2>Residence Type</h2>
+      </div>
+      <div class="combocheckbox">
+
+                <script>
+                    function hiddenn(pvar) {
+                      if(pvar==0){
+                      document.getElementById("txt1").style.display = 'none';
+                      }else{
+                      document.getElementById("txt1").style.display = '';
+                      }
+                    }
+                </script>
+                  <body onload="hiddenn('0')">
+
+                  <!--Radio button and script here-->
+                  <div class="radio">
+                    <label><input type="radio" name="live" onclick="hiddenn('0')" checked>Stay Alone without roomate(4,500,Bath/month)</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="live" onclick="hiddenn('1')">Stay with specified roommate:(2,000 or 2,500 Bath/month)</label>
+                      <div id="txt1">
+                              <div class="radio-button">
+                                  <label class="radio"><input type="radio" name="friend" checked >Mr.</label>
+                                  <label class="radio"><input type="radio" name="friend">Miss</label>
+                            </div>
+                            <form class="form-inline " id=>
+                                <div class="form-group" >
+                                  <label >Name(ชื่อ):</label>
+                                  <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="form-group" >
+                                  <label >Surname(นามสกุล):</label>
+                                  <input type="text" class="form-control" id="surname">
+                                </div>
+                            </form>
+                            <form class="form-inline " id=>
+                                <div class="form-group" >
+                                  <label >Student ID :</label>
+                                  <input type="text" class="form-control" id="studentid">
+                                </div>
+                                <div class="form-group" >
+                                  <label >E-mail :</label>
+                                  <input type="text" class="form-control" id="mailfriend">
+                                </div>
+                            </form>
+                             <form class="form-inline ">
+                              <div class="form-group" >
+                                <label >Mobile Phone :</label>
+                                <input type="text" class="form-control" id="mobile">
+                              </div>
+                            </form>
+                      </div>
+                 </div>
+                  <div class="radio">
+                    <label><input type="radio" name="live" onclick="hiddenn('0')">Stay with unspecified roommate(2,000 or 2,500 Bath/month). A roommate will be assigned by SIIT</label>
+                  </div>
+      </div>
+     </div>
+
+     <div>
+      <form class ="button">
+        <button type="submit" class="btn btn-primary">Confirm</button>
       </form>
- </div>
+    </div>
 
 
 

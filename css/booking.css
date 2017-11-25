@@ -19,67 +19,61 @@
     
 }
 .Form1{
-	border-style: solid;
+    border-style: solid;
     border-left-width: 2px;
     border-left-color: #000000;
     border-top-width: 2px;
     border-bottom-width: 2px;
     border-right-width: 2px;
-    margin-bottom: 20px;
-    margin-left: 200px;
     margin-right: 150px;
+    margin-left: 200px;
+    margin-bottom: 20px;
 
 }
+
 .Form2{
-	border-style: solid;
+    border-style: solid;
     border-left-width: 2px;
     border-left-color: #000000;
     border-top-width: 2px;
     border-bottom-width: 2px;
     border-right-width: 2px;
-    margin-bottom: 20px;
-    margin-left: 200px;
     margin-right: 150px;
-
+    margin-left: 200px;
+    margin-bottom: 20px;
 }
-
-
-
-
 .jumbotron{
-	text-align: center;
-	background-image: url(../images/bg.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	padding-bottom: 10px;
-	margin-bottom: 0px;
-	padding-right: -50px;
-	padding-left: -50px;
+    text-align: center;
+    background-image: url(../images/bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    padding-right: -50px;
+    padding-left: -50px;
 
 
 }
 h1{
-	color: #fff;
-
+    color: #fff;
 
 }
-
 h2{
-	margin-left: 10px;
-	margin-top: 20px;
-	color: #fff;
-	
+    margin-left: 10px;
+    margin-bottom: : 20px;
+    color: #fff;
+
 
 }
 
 .nav-item{
-	font-color: #000000;
+    font-color: #000000;
 
 }
 
 nav{
-	background-color:#E6E6FA;
-	margin-top: 1px;
+    background-color:#E6E6FA;
+    margin-top: 1px;
     border-bottom:0px;
     border-top: 0px;
     border-left: 0px;
@@ -90,77 +84,51 @@ nav{
 
 
 }
-.button{
-	margin-left: 600px;
-
-}
-
 .form-group{
-	
-	margin-left: 20;
-}
-
-
-.radio-button{
-	margin-top: 20px;
-	
-
+    
+    margin-left: 20;
 }
 .radio{
-	margin-left: 20px;
+    margin-left: 20px;
 }
-
-
-#form-line{
-	margin-left: 60px;
+#school{
+    padding-right: 30px;
+    margin-left: 55px;
 }
-
 #name{
-	padding-right: 30px;
-	margin-left: 56px;
+    padding-right: 30px;
+    margin-left: 35px;
 }
 #surname{
-	padding-right: 100px;
-	margin-left: 15px;
+    padding-right: 100px;
+    margin-left: 15px;
 
-}
-#room{
-	margin-left: 60px;
-}
-.room{
-	margin-left: 16px;
 }
 #studentid{
-	
-	margin-left: 23px;
+    
+    margin-left: 28px;
+    margin-right: 70px;
 }
-
 .dropdown{
-	margin-left: 15px;
+    margin-left: 18px;
 }
-#datetime{
-	margin-left: 15px;
-
-}
-.check{
-	margin-left: 20px;
-	margin-bottom: 20px;
-
-}
-.checkbox{
-	margin-top: 10px;
+#mobile{
+    margin-left: 18px;
 }
 .combocheckbox{
-	margin-top: 30px;
+    margin-left: 20px;
 }
-#comment{
-	padding-right: 500px;
-	margin-left: 20px;
+#mailfriend{
+    margin-left: 45px;
+}
+.button{
+    margin-left: 600px;
+
 }
 .btn{
-	padding-left: 50px;
-	padding-right: 50px;
-	margin-top: 1px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 1px;
     border-bottom:0px;
     border-top: 0px;
     border-left: 0px;
@@ -168,10 +136,6 @@ nav{
     border-color: #000000;
     border-style: solid;
 
-	
+    
 }
-#bulb{
-	padding-left: 20px;
-	padding-right: 90px;
-	margin-left: 70px;
-}
+
