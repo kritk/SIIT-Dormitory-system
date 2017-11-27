@@ -9,6 +9,7 @@
     border-color: #000000;
     border-style: solid;
 
+
 }
 .selectpicker{
     width: 200px;
@@ -55,6 +56,8 @@
 	margin-bottom: 0px;
 	padding-right: -50px;
 	padding-left: -50px;
+
+
 
 
 }
@@ -116,11 +119,11 @@ nav{
 }
 
 #name{
-	padding-right: 30px;
+	
 	margin-left: 56px;
 }
 #surname{
-	padding-right: 100px;
+	
 	margin-left: 15px;
 
 }
@@ -154,7 +157,7 @@ nav{
 	margin-top: 30px;
 }
 #comment{
-	padding-right: 500px;
+	
 	margin-left: 20px;
 }
 .btn{
@@ -171,7 +174,6 @@ nav{
 	
 }
 #bulb{
-	padding-left: 20px;
-	padding-right: 90px;
+	
 	margin-left: 70px;
 }

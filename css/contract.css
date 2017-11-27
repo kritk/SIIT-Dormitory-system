@@ -131,3 +131,12 @@ h1{
     margin-left: 600px;
 
 }
+.form-inline{
+    margin-bottom: 20px;
+}
+#email{
+    margin-left: 65px;
+}
+.caddress{
+    margin-left: 80px;
+}
