@@ -16,6 +16,7 @@
 
 
 .jumbotron{
+	position: static;
 	text-align: center;
 	background-image: url(../images/bg.jpg);
 	background-size: 100% 100%;
@@ -38,6 +39,7 @@ h1{
 }
 
 nav{
+	position: static;
 	background-color:#E6E6FA;
 	margin-top: 1px;
     border-bottom:0px;

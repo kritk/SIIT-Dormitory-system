@@ -25,9 +25,15 @@
     border-top-width: 2px;
     border-bottom-width: 2px;
     border-right-width: 2px;
-    margin-right: 150px;
-    margin-left: 200px;
     margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 150px;
+    font-family: 'Cloud';
+    font-weight: bold;
+    background-color: #C0C0C0;
+    border-radius: 10px;
+    border-color:  #C0C0C0;
+    color: #191970;
 
 }
 
@@ -38,9 +44,15 @@
     border-top-width: 2px;
     border-bottom-width: 2px;
     border-right-width: 2px;
-    margin-right: 150px;
-    margin-left: 200px;
     margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 150px;
+    font-family: 'Cloud';
+    font-weight: bold;
+    background-color: #C0C0C0;
+    border-radius: 10px;
+    border-color:  #C0C0C0;
+    color: #191970;
 }
 .jumbotron{
     text-align: center;
