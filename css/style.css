@@ -85,22 +85,13 @@ nav{
 
 }
 
-.card-img-top{
-
-	width: 315px;
-	border-top: 5px;
-    border-left: 5px;
-    border-right: 5px;
-    border-bottom: 5px;
-    border-color: #fff;
-    border-style: solid;
 
 
-}
-
-.row{
+.container{
 	margin-bottom: 20px;
-
-
+}
+.row{
+	margin-right: 120px;
+	margin-left: 120px;
 	
 }
