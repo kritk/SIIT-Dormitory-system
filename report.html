@@ -54,259 +54,257 @@
 
 
 
-<div class="backgroundmain">
-  <div class="Form1">
-           <div>
-            <h2>Student Information</h2>
-          </div>
-   <!--Check box goes here-->
-           <div class="radio-button">
+  <div class="backgroundmain">
+    <form>
+      <div class="Form1">
+              <div>
+                <h2>Student Information</h2>
+              </div>
+              <!--Check box goes here-->
+              <div class="radio-button">
                 <label class="radio"><input type="radio" name="optradio" checked>Mr.</label>
                 <label class="radio"><input type="radio" name="optradio">Miss</label>
-          </div>
-
-  <!--Form inline goes here-->
-
-              <div>
-                  <form class="form-inline ">
-                    <div class="form-group" >
-                      <label >Name(ชื่อ) :</label>
-                      <input type="text" class="form-control" name = "name" id="name">
-                    </div>
-                    <div class="form-group" >
-                      <label >Surname(นามสกุล) :</label>
-                      <input type="text" class="form-control" name = "surname" id="surname">
-                    </div>
-                  </form>
               </div>
-
+              <!--Form inline goes here-->
               <div>
-                  <form class="form-inline ">
-                    <div class="form-group" >
-                      <label >Building (อาคาร) :</label>
-                      <div class="dropdown">
-                                 <select class="selectpicker">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
+                      <div class="form-inline ">
+                        <div class="form-group" >
+                          <label >Name(ชื่อ) :</label>
+                          <input type="text" class="form-control" name = "name" size="23" id="name">
+                        </div>
+                        <div class="form-group" >
+                          <label >Surname(นามสกุล) :</label>
+                          <input type="text" class="form-control" name = "surname" size="25" id="surname">
+                        </div>
                       </div>
-                    </div>
-                     <div class="form-group" >
-                      <label class="room">Room (ห้อง) :</label>
-                      <input type="text" class="form-control" name ="roomnumber" id="room">
-                    </div>
-
-
-                  </form>
               </div>
 
               <div>
-                  <form class="form-inline ">
-                    <div class="form-group">
-                            <label >วันและเวลาที่แจ้ง (Dateandtime) :</label>
-                            <input class="form-control" type="datetime-local" value="2018-01-01T12:00:00" id="datetime">
-                    </div>
-                    <div class="form-group" >
-                      <label >Tel.(เบอร์โทร) :</label>
-                      <input type="text" class="form-control" name = "mobilereport" id="name">
-                    </div>
-                  </form>
+                      <div class="form-inline ">
+                        <div class="form-group" >
+                          <label >Building (อาคาร) :</label>
+                          <div class="dropdown">
+                              <select class="selectpicker">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                              </select>
+                          </div>
+                        </div>
+                         <div class="form-group" >
+                          <label class="room">Room (ห้อง) :</label>
+                          <input type="text" class="form-control" name ="roomnumber" id="room">
+                        </div>
+                      </div>
               </div>
               <div>
-                <form class="form-inline ">
+                      <div class="form-inline ">
+                        <div class="form-group">
+                          <label >วันและเวลาที่แจ้ง (Dateandtime) :</label>
+                          <input class="form-control" type="datetime-local" value="2018-01-01T12:00:00" id="datetime">
+                        </div>
+                      </div>
+              </div>
+              <div>
+                <div class="form-inline ">
                     <div class="form-group" >
-                          <label >Status(สถานะผู้แจ้ง) :</label>
-                                <div class="dropdown">
-                                     <select class="selectpicker">
-                                        <option value="student">Student</option>
-                                        <option value="faculty">Faculty</option>
-                                        <option value="staff">Staff</option>
-                                    </select>
-
-                                </div>
+                          <label >Tel.(เบอร์โทร) :</label>
+                          <input type="text" class="form-control" name = "mobilereport" id="name">
                     </div>
-                     
-                </form>
-                <div class="form-inline">
-                  <div class="form-group">
-                                <label >Appointment on(date) วันนัดหมายและเวลา :</label>
-                                <input class="form-control" type="datetime-local" value="2018-01-01T12:00:00" id="datetime">
-                  </div>
                 </div>
               </div>
-              <!--Check box here-->
-                    <div class="check">
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="" > I allow technician(s) come in under the responsibility of the
-security guard without the presence of me in mentioned date and time. I
-have kept all my valuable belongings out of the room already (อนุญาตให้ช่างเข้าซ่อมพร้อมกับมอบให้ รปภ. ดูแลโดยไม่จำเป็นต้องมีข้าพเจ้าอยู่
-ข้าพเจ้าได้เก็บทรัพย์สินมีค่า เรียบร้อยแล้ว)</label>
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="" > In case of repairing is unable to be applied, I will be responsible for the
-expenses of spare parts (หากมีค่าอะไหล่กรณีซ่อมไม่ได้ / ต้องเปลี่ยน
-ข้าพเจ้ายินยอมชำระค่าอะไหล่ตามที่ สถาบันฯ กำหนดไว้)</label>
+              <div>
+                    <div class="form-inline ">
+                        <div class="form-group" >
+                              <label >Status(สถานะผู้แจ้ง) :</label>
+                                    <div class="dropdown">
+                                        <select class="selectpicker">
+                                            <option value="student">Student</option>
+                                            <option value="faculty">Faculty</option>
+                                            <option value="staff">Staff</option>
+                                        </select>
+                                    </div>
+                        </div>
+                         
+                    </div>
+                    <div class="form-inline">
+                      <div class="form-group">
+                            <label >Appointment on(date) วันนัดหมายและเวลา :</label>
+                            <input class="form-control" type="datetime-local" value="2018-01-01T12:00:00" id="datetime">
                       </div>
                     </div>
+              </div>
+                  <!--Check box here-->
+              <div class="check">
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="" > I allow technician(s) come in under the responsibility of the
+                            security guard without the presence of me in mentioned date and time. I
+                            have kept all my valuable belongings out of the room already (อนุญาตให้ช่างเข้าซ่อมพร้อมกับมอบให้ รปภ. ดูแลโดยไม่จำเป็นต้องมีข้าพเจ้าอยู่
+                            ข้าพเจ้าได้เก็บทรัพย์สินมีค่า เรียบร้อยแล้ว)</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="" > In case of repairing is unable to be applied, I will be responsible for the
+                            expenses of spare parts (หากมีค่าอะไหล่กรณีซ่อมไม่ได้ / ต้องเปลี่ยน
+                            ข้าพเจ้ายินยอมชำระค่าอะไหล่ตามที่ สถาบันฯ กำหนดไว้)</label>
+                          </div>
+              </div>
+      </div>
+      <div class ="Form2">
+                    <div>
+                      <h2 > Repair Items(รายการที่ต้องการซ่อม)</h2>
+                    </div>
+                    <!--Combo checkbox here-->
+                    <div class="combocheckbox">
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Doors (broken/ cause a noise/ out
+                        of the frame) (ประตูชำรุด / ปิดเสียงดัง / ประตูตก)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Wardrobe (its doors
+                        are broken/ Clothesline is broken/
+                        its key is broken) (ตู้เสื้อผ้า/ประตูหลุด / ราวหลุด /
+                        กุญแจหักคา)</label>
+
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Drawers are broken (ลิ้นชักชำรุด)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Parts of bed are broken (เตียง/หัวเตียงหลุด / ปลายเตียงหลุด /
+                        ไม้รอง)</label>
+                        <br />
+                      </div>
+
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Windows (out of the
+                        frame/ broken/ rubber frame is
+                        slipped off) (หน้าต่างกระจกตกราง / แตกร้าว /
+                        ขอบยางหลุด)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Plugs (electricity/
+                        telephone/ TV/ its cover) (ปลั๊กไฟ/ปลั๊กโทรศัพท์ / ปลั๊กทีวี /
+                        ฝาครอบปลั๊ก)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Air
+                        conditioner (causes a noise/ not
+                        giving cold air/ has water drops) (แอร์เสียงดัง / ไม่เย็น / มีน้ำหยด)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Parts of shower are
+                        broken (ฝักบัวชำรุด / ก๊อกฝักบัว / หัวฝักบัว /
+                        สายฝักบัว)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Rinse spray hose is broken (สายฉีดชำรุด / สายแตก / หัวฉีดหัก)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Sink is blocked/
+                        Unstoppable water (อ่างล้างหน้าตัน / น้ำไหลไม่หยุด /
+                        ก๊อกปิดไม่สนิท)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Flush
+                        toilet is blocked. / Water flows
+                        unstoppably (ชักโครกตัน / น้ำไหลไม่หยุด)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Water heater is broken (เครื่องทำน้ำอุ่นชำรุด / ไม่ร้อน /
+                        ปรับไม่ได้)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Drainpipe is blocked / pipe at the
+                        terrace is blocked (ท่อน้ำทิ้งห้องน้ำตัน / ท่อระเบียงตัน)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Water tap at
+                        terrace is broken (ก๊อกน้ำระเบียงชำรุด)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Doorknobs are broken (ลูกบิดประตูล็อคค้าง / ล็อคไม่ได้)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Desk is
+                        broken (โต๊ะอ่านหนังสือชำรุด)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> TV shelf is
+                        broken / Dining table is broken (โต๊ะวางทีวีชำรุด /
+                        โต๊ะรับประทานอาหารชำรุด)</label>
+                        <br />
+                        <br />
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Dining chairs
+                        are broken / Chair at the desk is
+                        broken (เก้าอี้นั่งทานอาหารชำรุด /
+                        เก้าอี้อ่านหนังสือชำรุด)</label>
+                        <br />
+                      </div>
+                      <div class="check">
+                        <label class="checkbox-inline"><input type="checkbox" value=""> Mosquito wire screen is ripped/
+                        Mosquito wire screen is out of the
+                        frame/ Rubber frame is slipped
+                        off (มุ้งลวดขาด / ขอบยางหลุด / ตกราง)</label>
+                        <br />
+                        <br />
+                      </div>
+                      <!--Form inline goes here again-->
+                      <div>
+                          <div class="form-inline ">
+                            <div class="form-group" >
+                              <label >Light bulbs at(หลอดไฟ ระบุ แบบ) :</label>
+                              <input type="text" class="form-control" id="bulb">
+                            </div>
+                          </div>
+                      </div>
+                      <div>
+                          <div class="form-inline ">
+                            <div class="form-group" >
+                              <label >Light switches broken at(สวิตซ์ไฟชำรุดที่) :</label>
+                              <input type="text" class="form-control" size="25" id="b">
+                            </div>
+                          </div>
+                      </div>
+                      <div>
+                          <div class="form-inline ">
+                            <div class="form-group">
+                                  <label for="comment">Other(อื่นๆ) :</label>
+                                  <textarea class="form-control" rows="3" id="comment"></textarea>
+                            </div>
+                          </div>
+                      </div>
+      </div>  
+      <!-- Button -->
+      <div>
+        <div class ="button">
+          <button type="submit" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>  
+    </form>         
+  </div>
+  <div class="bottom">
+            <h5 class="bottommain"> All Rights Reserved </h5>
+            <span class="bottomquote">Property Management Division (SIIT Bangkadi)
+              <br />
+              Sirindhorn International Institute of Technology, Bangkadi Campus
+              <br />
+              200 Moo 5, Tivanond Rd., Bangkadi, A.Muang, Pathumthani 12000, THAILAND
+              <br />
+              TEL: (+66) 0-2501- 3505 ~ 20 ext. 4802, 4801
+              <br />
+              FAX: (+66) 0-2501- 3521</span>
   </div>
 
 
 
-  <div class ="Form2">
-                <div>
-                  <h2 > Repair Items(รายการที่ต้องการซ่อม)</h2>
-                </div>
-                <!--Combo checkbox here-->
-                <div class="combocheckbox">
-                  <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Doors (broken/ cause a noise/ out
-of the frame) (ประตูชำรุด / ปิดเสียงดัง / ประตูตก)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Wardrobe (its doors
-are broken/ Clothesline is broken/
-its key is broken) (ตู้เสื้อผ้า/ประตูหลุด / ราวหลุด /
-กุญแจหักคา)</label>
 
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Drawers are broken (ลิ้นชักชำรุด)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Parts of bed are broken (เตียง/หัวเตียงหลุด / ปลายเตียงหลุด /
-ไม้รอง)</label>
-                  <br />
-                  </form>
-
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Windows (out of the
-frame/ broken/ rubber frame is
-slipped off) (หน้าต่างกระจกตกราง / แตกร้าว /
-ขอบยางหลุด)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Plugs (electricity/
-telephone/ TV/ its cover) (ปลั๊กไฟ/ปลั๊กโทรศัพท์ / ปลั๊กทีวี /
-ฝาครอบปลั๊ก)</label>
-                    <br />
-                  </form>
-
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Air
-conditioner (causes a noise/ not
-giving cold air/ has water drops) (แอร์เสียงดัง / ไม่เย็น / มีน้ำหยด)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Parts of shower are
-broken (ฝักบัวชำรุด / ก๊อกฝักบัว / หัวฝักบัว /
-สายฝักบัว)</label>
-                    <br />
-                  </form>
-
-                  </form>
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Rinse spray hose is broken (สายฉีดชำรุด / สายแตก / หัวฉีดหัก)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Sink is blocked/
-Unstoppable water (อ่างล้างหน้าตัน / น้ำไหลไม่หยุด /
-ก๊อกปิดไม่สนิท)</label>
-                    <br />
-                  </form>
-
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Flush
-toilet is blocked. / Water flows
-unstoppably (ชักโครกตัน / น้ำไหลไม่หยุด)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Water heater is broken (เครื่องทำน้ำอุ่นชำรุด / ไม่ร้อน /
-ปรับไม่ได้)</label>
-                    <br />
-                  </form>
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Drainpipe is blocked / pipe at the
-terrace is blocked (ท่อน้ำทิ้งห้องน้ำตัน / ท่อระเบียงตัน)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Water tap at
-terrace is broken (ก๊อกน้ำระเบียงชำรุด)</label>
-                    <br />
-                  </form>
-
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Doorknobs are broken (ลูกบิดประตูล็อคค้าง / ล็อคไม่ได้)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Desk is
-broken (โต๊ะอ่านหนังสือชำรุด)</label>
-                    <br />
-                  </form>
-                  </form>
-                   <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> TV shelf is
-broken / Dining table is broken (โต๊ะวางทีวีชำรุด /
-โต๊ะรับประทานอาหารชำรุด)</label>
-                    <br />
-                    <br />
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Dining chairs
-are broken / Chair at the desk is
-broken (เก้าอี้นั่งทานอาหารชำรุด /
-เก้าอี้อ่านหนังสือชำรุด)</label>
-                    <br />
-                  </form>
-                  <form class="check">
-                    <label class="checkbox-inline"><input type="checkbox" value=""> Mosquito wire screen is ripped/
-Mosquito wire screen is out of the
-frame/ Rubber frame is slipped
-off (มุ้งลวดขาด / ขอบยางหลุด / ตกราง)</label>
-                    <br />
-                    <br />
-                  </form>
-                </div>
-
-                 <!--Form inline goes here again-->
-                <div>
-                    <form class="form-inline ">
-                      <div class="form-group" >
-                        <label >Light bulbs at(หลอดไฟ ระบุ แบบ) :</label>
-                        <input type="text" class="form-control" id="bulb">
-                      </div>
-                    </form>
-                </div>
-                <div>
-                    <form class="form-inline ">
-                      <div class="form-group" >
-                        <label >Light switches broken at(สวิตซ์ไฟชำรุดที่) :</label>
-                        <input type="text" class="form-control" id="surname">
-                      </div>
-                    </form>
-                </div>
-                <div>
-                    <form class="form-inline ">
-                      <div class="form-group">
-                            <label for="comment">Other(อื่นๆ) :</label>
-                            <textarea class="form-control" rows="3" id="comment"></textarea>
-                      </div>
-                    </form>
-                </div>
-    </div>
-
-
-
-
-    <!-- Button -->
-
-    <div>
-      <form class ="button">
-        <button type="submit" class="btn btn-primary">Confirm</button>
-      </form>
-    </div>
+  
 
 
 

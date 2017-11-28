@@ -58,6 +58,9 @@
 
 
 }
+.form-inline{
+	margin-bottom: 20px;
+}
 h1{
 	color: #fff;
 
@@ -76,6 +79,9 @@ h2{
 	font-color: #000000;
 
 }
+form{
+	margin-bottom: 0em;
+}
 
 nav{
 	background-color:#E6E6FA;
@@ -92,6 +98,7 @@ nav{
 }
 .button{
 	margin-left: 600px;
+	margin-bottom: 20px;
 
 }
 
@@ -116,11 +123,11 @@ nav{
 }
 
 #name{
-	padding-right: 30px;
+	
 	margin-left: 56px;
 }
 #surname{
-	padding-right: 100px;
+	
 	margin-left: 15px;
 
 }
@@ -171,7 +178,15 @@ nav{
 	
 }
 #bulb{
-	padding-left: 20px;
-	padding-right: 90px;
+	
 	margin-left: 70px;
+}
+#b{
+	margin-left: 12px;
+}
+.bottom{
+	text-align: center;
+	background-color: #778899;
+	
+
 }

@@ -10,6 +10,9 @@
     border-style: solid;
 
 }
+form{
+    margin-bottom: 0em;
+}
 
 .Form1{
 	border-style: solid;
@@ -72,6 +75,9 @@ nav{
     padding-left: 6px;
     
 }
+.form-inline{
+    margin-bottom: 20px;
+}
 
 .dropdown{
     margin-left: 40px;
@@ -114,20 +120,28 @@ h1{
 .address{
     margin-left: 10px;
 }
+.address1{
+    margin-left: 80px;
+}
 .btn{
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 1px;
-    border-bottom:0px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-color: #000000;
-    border-style: solid;
+    margin-bottom: 20px;
 
     
 }
 .button{
     margin-left: 600px;
 
+}
+#email{
+    margin-left: 65px;
+}
+#cphone{
+    margin-left: 20px;
+}
+.bottom{
+    text-align: center;
+    background-color: #778899;
 }
