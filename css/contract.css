@@ -16,6 +16,11 @@ form{
 .a{
     font-weight: bold;
 }
+.B{
+    margin-left: 20px;
+    font-size: 20px;
+    color: #a0522d;
+}
 .require{
     margin-left: 20px;
     margin-bottom: 10px;
