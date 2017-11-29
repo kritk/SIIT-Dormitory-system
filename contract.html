@@ -12,6 +12,8 @@
 
   </head>
   <body>
+  
+  
     <!--Jumbotron Section-->
 
              <div class="jumbotron jumbotron-fluid">
@@ -153,20 +155,23 @@
             <script>
                                 function hiddenn(pvar) {
                                   if(pvar==1){
-                                  document.getElementById("type2").style.display = '';
-                                  document.getElementById("type3").style.display = 'none';
+                                    document.getElementById("type2").style.display = '';
+                                    
                                   }
                                   else if(pvar==2){
-                                  document.getElementById("type3").style.display = '';
-                                  document.getElementById("type2").style.display = 'none';
+                                    document.getElementById("type3").style.display = '';
+                                    document.getElementById("type2").style.display = 'none';
                                   }
                                   else{
-                                  document.getElementById("type2").style.display = 'none';
-                                  document.getElementById("type3").style.display = 'none';
+                                    document.getElementById("type3").style.display = 'none';
+                                    document.getElementById("type2").style.display = 'none';
                                   }
+                                 
                                 }
+                                
             </script>
             <body onload="hiddenn('0')">
+           
 
             
             <div>
@@ -305,6 +310,40 @@
             <br> to strictly follow this agreement for using the rental room. Thus, the tenant’s
             <br> signature on this document is served as evidence. </a>
           </div>
+          <div class="scholar">
+            <div>
+                <script>
+                   function hiddener(avar) {
+                                    if(avar== 0){
+                                        document.getElementById("type4").style.display = 'none'; 
+                                    }
+                                    else{
+                                         
+                                        document.getElementById("type4").style.display = ''; 
+                                    }
+                                  }
+                </script>
+                <body onload="hiddener('0')">
+                
+
+
+                <br><label><input type="radio" name="schorlar" onclick="hiddener('0')" value="noscholar" >The tenant does not receive any scholarship from the institute.</label>
+            </div>
+            <div>
+                <label><input type="radio" name="schorlar" onclick="hiddener('1')" value="havescholar" >The tenant receives the following scholarship from the institute.</label>
+                <div class="roomnum" id="type4">
+                  <label><input type="radio" name="scholartype" value="EFS" checked > Graduate Scholarship for Excellent Foreign Students (EFS)</label>
+                  <br><label><input type="radio" name="scholartype" value="memberquota" > SIIT Scholarship for Graduate Students (Faculty Member’s Quota)</label>
+                  <br><label><input type="radio" name="scholartype" value="4-year" > SIIT 4-Year Continuing Scholarships for Undergraduate Students</label>
+                  <br><label><input type="radio" name="scholartype" value="otherscholar" > Other (Please specify) </label>
+                  <div class="form-inline">
+                    <input type="text" class="form-control" name="otherscholar" size="25" id="name">
+                  </div>
+                </div>
+            </div>
+          </div>
+         
+
 
 
           
