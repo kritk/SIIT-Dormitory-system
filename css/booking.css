@@ -66,22 +66,32 @@
 
 
 }
+.a{
+    font-weight: bold;
+}
+.require{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
 h1{
     color: #fff;
 
 }
+.check{
+    margin-left: 43%;
+    color: #ff0000;
+
+}
 h2{
     margin-left: 10px;
-    margin-bottom: : 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: #fff;
 
 
 }
 
-.nav-item{
-    font-color: #000000;
 
-}
 
 nav{
     background-color:#E6E6FA;

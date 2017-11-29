@@ -32,6 +32,11 @@ h1{
 	color: #fff;
 
 }
+h2{
+	font-size: 20;
+	font-family:'Helvetica';
+	color: 	#fff; 
+}
 
 .nav-item{
 	font-color: #000000;
@@ -53,11 +58,11 @@ nav{
 
 }
 .carousel{
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
 	width: 70%;
+
 
 
 }
@@ -69,6 +74,8 @@ nav{
     border-bottom: 5px;
     border-color: #fff;
     border-style: solid;
+    border-radius: 10px;
+
 
 }
 .d-block{
@@ -79,14 +86,27 @@ nav{
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-bottom: 20px;
+	color:#483D8B ;
+	font-family: 'Helvetica';
 }
+
 .bottom{
 	text-align: center;
 	background-color: #778899;
 	margin-bottom: 0px;
 
 }
-
+.a{
+	font-weight: bold;
+}
+.card-title{
+	font-weight: bold;
+	font-size: 12;
+	color: 	#5f9ea0;
+}
+.card-body{
+	background-color: #f0f8ff;
+}
 
 
 .cont{
@@ -98,3 +118,10 @@ nav{
 	margin-left: 110px;
 	
 }
+.card-header{
+	background-color:#2f4f4f;
+}
+.img-thumbnail{
+	max-height: 200px;
+}
+
