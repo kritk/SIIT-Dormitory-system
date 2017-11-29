@@ -82,6 +82,9 @@ form{
 	font-color: #000000;
 
 }
+#studentid{
+    margin-left: 20px;
+}
 nav{
 	background-color:#E6E6FA;
 	margin-top: 1px;
@@ -176,4 +179,7 @@ h1{
 .bottom{
     text-align: center;
     background-color: #778899;
+}
+.roomnum{
+    margin-left: 40px;
 }
