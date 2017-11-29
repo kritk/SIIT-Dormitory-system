@@ -15,15 +15,16 @@
 <body>
 	<?php
 	$namer = $_POST["namer"];
- 	$sernamer = $_POST["surnamer"];
+ 	$surnamer = $_POST["surnamer"];
  	$studentidr = $_POST["studentidr"];
  	$gender = $_POST["gender"];
+ 	$curriculumr = $_POST["curriculumr"];
  	$school = $_POST["school"];
  	$emailr = $_POST["emailr"];
  	$mphoner = $_POST["mphoner"];
  	$phoner = $_POST["phoner"];
  	$option = $_POST["live"];
-
+//roommate
  	$fgender = $_POST["friend"];
  	$fname = $_POST["fname"];
  	$fsurname = $_POST["fsurname"];
@@ -47,11 +48,11 @@
 			              <li class="nav-item">
 			                <a class="nav-link" href="index.html">Home</a>
 			              </li>
-			              
+
 			              <li class="nav-item">
 			                <a class="nav-link" href="contract.html">Create Contract</a>
 			              </li>
-			              
+
 			              <li class="nav-item active">
 			                <a class="nav-link" href="booking.html">Create Booking</a>
 			              </li>
@@ -87,17 +88,54 @@
 						    </div>
 						  	</div>
 						  	<div class="form-group row">
-						    <label for="staticEmail" class="col-sm-2 col-form-label">Name:</label>
+						    <label for="staticEmail" class="col-sm-2 col-form-label">Surname:</label>
 						    <div class="col-sm-10">
-						      <input type="text" readonly class="form-control-plaintext" value="<?php echo $namer ?>">
+						      <input type="text" readonly class="form-control-plaintext" value="<?php echo $surnamer ?>">
 						    </div>
 						  	</div>
-						  	<div class="form-group row">
-						    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+								<div class="form-group row">
+						    <label for="staticEmail" class="col-sm-2 col-form-label">Student ID:</label>
 						    <div class="col-sm-10">
-						    <input type="text" class="form-control" >
+						      <input type="text" readonly class="form-control-plaintext" value="<?php echo $studentidr ?>">
 						    </div>
-						  </div>
+						  	</div>
+								<div class="form-group row">
+						    <label for="staticEmail" class="col-sm-2 col-form-label">Curriculum:</label>
+						    <div class="col-sm-10">
+						      <input type="text" readonly class="form-control-plaintext" value="<?php echo $curriculumr ?>">
+						    </div>
+						  	</div>
+								<div class="form-group row">
+						    <label for="staticEmail" class="col-sm-2 col-form-label">School:</label>
+						    <div class="col-sm-10">
+						      <input type="text" readonly class="form-control-plaintext" value="<?php echo $school ?>">
+						    </div>
+						  	</div>
+								<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">E-mail:</label>
+								<div class="col-sm-10">
+									<input type="text" readonly class="form-control-plaintext" value="<?php echo $emailr ?>">
+								</div>
+								</div>
+								<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Mobile Phone:</label>
+								<div class="col-sm-10">
+									<input type="text" readonly class="form-control-plaintext" value="<?php echo $mphoner ?>">
+								</div>
+								</div>
+								<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Phone:</label>
+								<div class="col-sm-10">
+									<input type="text" readonly class="form-control-plaintext" value="<?php echo $phoner ?>">
+								</div>
+								</div>
+								<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Residence Type:</label>
+								<div class="col-sm-10">
+									<input type="text" readonly class="form-control-plaintext" value="<?php echo $option ?>">
+								</div>
+								</div>
+
 						</div>
 
 
