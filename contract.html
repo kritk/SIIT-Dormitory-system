@@ -142,13 +142,84 @@
                           <input type="text" class="form-control"  size="25" name="Ce-mail" id="email">
                         </div>
           </div>
+        </div>
+        <div class="Form2">
+                  <div>
+                        <h2>Residence Type</h2>
+                  </div>
+                  <div class="combocheckbox">
+                            <script>
+                                function hiddenn(pvar) {
+                                  if(pvar==0){
+                                  document.getElementById("txt1").style.display = 'none';
+                                  }else{
+                                  document.getElementById("txt1").style.display = '';
+                                  }
+                                }
+                            </script>
+                              <body onload="hiddenn('0')">
 
+                              <!--Radio button and script here-->
 
+                              <div class="radio">
+                                <label><input type="radio" name="live" onclick="hiddenn('0')" value="1" checked>Stay Alone without roomate(4,500,Bath/month)</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="live" onclick="hiddenn('1')" value="2">Stay with specified roommate:(2,000 or 2,500 Bath/month)</label>
+                                  <div id="txt1">
+                                        <div class="radio-button">
+                                              <label class="radio"><input type="radio" name="friend" value="male" checked >Mr.</label>
+                                              <label class="radio"><input type="radio" name="friend" value="female">Miss</label>
+                                        </div>
+                                        <div class="form-inline " >
+                                            <div class="form-group" >
+                                              <label >Name(ชื่อ):</label>
+                                              <input type="text" class="form-control" name="fname" id="name" required>
+                                            </div>
+                                            <div class="form-group" >
+                                              <label >Surname(นามสกุล):</label>
+                                              <input type="text" class="form-control" name="fsurname" id="surname" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-inline " >
+                                            <div class="form-group" >
+                                              <label >Student ID :</label>
+                                              <input type="text" class="form-control" name="fstudentid" id="studentid" required >
+                                            </div>
+                                            <div class="form-group" action="bookingconfirm.php" method="post" >
+                                              <label >E-mail :</label>
+                                              <input type="text" class="form-control" name="femail" id="mailfriend" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-inline " >
+                                            <div class="form-group" >
+                                              <label >Mobile Phone :</label>
+                                              <input type="text" class="form-control" name="fmphone" id="mobile" required >
+                                            </div>
+                                        </div>
+                                  </div>
+                              </div>
 
-
-
-
-
+                              <div class="radio">
+                                <label><input type="radio" name="live" onclick="hiddenn('0')" value="3">Stay with unspecified roommate(2,000 or 2,500 Bath/month). A roommate will be assigned by SIIT</label>
+                              </div>
+                  </div>
+        </div>
+        <div class="Form1">
+          <div>
+              <h2>Required Documents for Rental Agreement</h2>
+          </div>
+          <div class="require">
+            <a class="a">•  A copy of SIIT student ID Card</a>
+            <br><a class="a">•  A copy of citizen ID card/passport for international student</a>
+            <br><a class="a">•  A copy of guardian's citizen ID card / passport for non-Thai citizen</a>
+            <br><a class="a">•  A copy of student's household registration</a>
+            <br><a class="a">•  3 x 1" Photos of applicant in student uniform </a>
+          </div>
+          <div class="check">
+            <label class="checkbox-inline"><input type="checkbox" required> Agree</label>
+          </div>
+          
         </div>
 
         <div>

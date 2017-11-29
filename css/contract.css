@@ -13,6 +13,18 @@
 form{
     margin-bottom: 0em;
 }
+.a{
+    font-weight: bold;
+}
+.require{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.check{
+    margin-left: 43%;
+    color: #ff0000;
+
+}
 
 .Form1{
 	border-style: solid;
