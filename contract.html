@@ -43,9 +43,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Staff login</a>
-              </li>
+             
 
 
 
@@ -312,58 +310,17 @@
           </div>
           <div class="scholar">
             <div>
-                <script>
-                   function hiddener(avar) {
-                                    if(avar== 0){
-                                        document.getElementById("type4").style.display = 'none'; 
-                                    }
-                                    else{
-                                         
-                                        document.getElementById("type4").style.display = ''; 
-                                    }
-                                  }
-                </script>
-                <body onload="hiddener('0')">
-                
-
-
-                <br><label><input type="radio" name="schorlar" onclick="hiddener('0')" value="noscholar" >The tenant does not receive any scholarship from the institute.</label>
-            </div>
-            <div>
-                <label><input type="radio" name="schorlar" onclick="hiddener('1')" value="havescholar" >The tenant receives the following scholarship from the institute.</label>
-                <div class="roomnum" id="type4">
-                  <label><input type="radio" name="scholartype" value="EFS" checked > Graduate Scholarship for Excellent Foreign Students (EFS)</label>
-                  <br><label><input type="radio" name="scholartype" value="memberquota" > SIIT Scholarship for Graduate Students (Faculty Member’s Quota)</label>
-                  <br><label><input type="radio" name="scholartype" value="4-year" > SIIT 4-Year Continuing Scholarships for Undergraduate Students</label>
-                  <br><label><input type="radio" name="scholartype" value="otherscholar" > Other (Please specify) </label>
-                  <div class="form-inline">
+                <br><label><input type="radio" name="scholartype" value="noscholar" checked >The tenant does not receive any scholarship from the institute.</label>
+                <br><label><input type="radio" name="scholartype" value="EFS"> Graduate Scholarship for Excellent Foreign Students (EFS)</label>
+                <br><label><input type="radio" name="scholartype" value="memberquota" > SIIT Scholarship for Graduate Students (Faculty Member’s Quota)</label>
+                <br><label><input type="radio" name="scholartype" value="4-year" > SIIT 4-Year Continuing Scholarships for Undergraduate Students</label>
+                <br><label><input type="radio" name="scholartype" value="otherscholar" > Other (Please specify) </label>
+                <div class="form-inline">
                     <input type="text" class="form-control" name="otherscholar" size="25" id="name">
-                  </div>
                 </div>
             </div>
-          </div>
-         
-
-
-
-          
-        </div>
-        <div class="Form1">
-          <div>
-              <h2>Required Documents for Rental Agreement</h2>
-          </div>
-          <div class="require">
-            <a class="a">•  A copy of SIIT student ID Card</a>
-            <br><a class="a">•  A copy of citizen ID card/passport for international student</a>
-            <br><a class="a">•  A copy of guardian's citizen ID card / passport for non-Thai citizen</a>
-            <br><a class="a">•  A copy of student's household registration</a>
-            <br><a class="a">•  3 x 1" Photos of applicant in student uniform </a>
-          </div>
-          <div class="check">
-            <br><label class="checkbox-inline"><input type="checkbox" required> I have read and agreed</label>
-          </div>
-        </div>
-        
+          </div>   
+        </div> 
         <div>
           <div class ="button2">
             <button type="submit" class="btn btn-primary">Confirm</button>

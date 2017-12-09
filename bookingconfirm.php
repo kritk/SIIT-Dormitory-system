@@ -62,9 +62,7 @@
 			              <li class="nav-item">
 			                <a class="nav-link" href="contact.html">Contact us</a>
 			              </li>
-			              <li class="nav-item">
-			                <a class="nav-link" href="login.html">Staff login</a>
-			              </li>
+			              
 			            </ul>
 			          </div>
        		 </nav>
