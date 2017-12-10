@@ -69,3 +69,11 @@ nav{
 
 
 }
+.btn{
+    margin-left: 42%;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color:   #DAA520 ;
+    border-color:   #DAA520;
+    margin-bottom: 20px;
+}

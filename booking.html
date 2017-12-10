@@ -59,8 +59,8 @@
                     <!--Check box goes here-->
                     <div action="bookingconfirm.php" method="post"   >
                         <div class="radio-button"  >
-                          <label class="radio"><input type="radio" name="gender" value="male" checked >Mr.</label>
-                          <label class="radio"><input type="radio" name="gender" value="female" >Miss</label>
+                          <label class="radio"><input type="radio" name="gender" value="Male" checked >Mr.</label>
+                          <label class="radio"><input type="radio" name="gender" value="Female" >Miss</label>
                         </div>
                     </div>
 
@@ -131,10 +131,20 @@
                   <div class="combocheckbox">
                             <script>
                                 function hiddenn(pvar) {
+                                  let a = document.getElementsByClassName("Dynamicrequired");
+                                  var i;
+                                  console.log(a);
                                   if(pvar==0){
                                   document.getElementById("txt1").style.display = 'none';
+                                  for (i = 0; i<4 ; i++){
+                                    a[i].removeAttribute('required');
+                                  }
                                   }else{
                                   document.getElementById("txt1").style.display = '';
+                                  for (i = 0; i <4 ; i++) { 
+                                   a[i].setAttribute('required', true);
+                                  }
+
                                   }
                                 }
                             </script>
@@ -143,46 +153,46 @@
                               <!--Radio button and script here-->
 
                               <div class="radio">
-                                <label><input type="radio" name="live" onclick="hiddenn('0')" value="1" checked>Stay Alone without roomate(4,500,Bath/month)</label>
+                                <label><input type="radio" name="live" onclick="hiddenn('0')" value="Stay Alone without roomate(4,500,Bath/month)" checked>Stay Alone without roomate(4,500,Bath/month)</label>
                               </div>
                               <div class="radio">
-                                <label><input type="radio" name="live" onclick="hiddenn('1')" value="2">Stay with specified roommate:(2,000 or 2,500 Bath/month)</label>
+                                <label><input type="radio" name="live" onclick="hiddenn('1')" value="Stay with specified roommate:(2,000 or 2,500 Bath/month)">Stay with specified roommate:(2,000 or 2,500 Bath/month)</label>
                                   <div id="txt1">
                                         <div class="radio-button">
-                                              <label class="radio"><input type="radio" name="friend" value="male" checked >Mr.</label>
-                                              <label class="radio"><input type="radio" name="friend" value="female">Miss</label>
+                                              <label class="radio"><input type="radio" name="friend" value="Male">Mr.</label>
+                                              <label class="radio"><input type="radio" name="friend" value="Female">Miss</label>
                                         </div>
                                         <div class="form-inline " >
                                             <div class="form-group" >
                                               <label >Name(ชื่อ):</label>
-                                              <input type="text" class="form-control" name="fname" id="name">
+                                              <input type="text" class="form-control Dynamicrequired" name="fname" id="name">
                                             </div>
                                             <div class="form-group" >
                                               <label >Surname(นามสกุล):</label>
-                                              <input type="text" class="form-control" name="fsurname" id="surname" >
+                                              <input type="text" class="form-control Dynamicrequired" name="fsurname" id="surname" >
                                             </div>
                                         </div>
                                         <div class="form-inline " >
                                             <div class="form-group" >
                                               <label >Student ID :</label>
-                                              <input type="text" class="form-control" name="fstudentid" id="studentid"  >
+                                              <input type="text" class="form-control Dynamicrequired" name="fstudentid" id="studentid"  >
                                             </div>
-                                            <div class="form-group" action="bookingconfirm.php" method="post" >
+                                            <div class="form-group" >
                                               <label >E-mail :</label>
-                                              <input type="text" class="form-control" name="femail" id="mailfriend" >
+                                              <input type="text" class="form-control Dynamicrequired" name="femail" id="mailfriend" >
                                             </div>
                                         </div>
                                         <div class="form-inline " >
                                             <div class="form-group" >
                                               <label >Mobile Phone :</label>
-                                              <input type="text" class="form-control" name="fmphone" id="mobile"  >
+                                              <input type="text" class="form-control Dynamicrequired" name="fmphone" id="mobile"  >
                                             </div>
                                         </div>
                                   </div>
                               </div>
 
                               <div class="radio">
-                                <label><input type="radio" name="live" onclick="hiddenn('0')" value="3">Stay with unspecified roommate(2,000 or 2,500 Bath/month). A roommate will be assigned by SIIT</label>
+                                <label><input type="radio" name="live" onclick="hiddenn('0')" value="Stay with unspecified roommate(2,000 or 2,500 Bath/month). A roommate will be assigned by SIIT">Stay with unspecified roommate(2,000 or 2,500 Bath/month). A roommate will be assigned by SIIT</label>
                               </div>
                   </div>
         </div>

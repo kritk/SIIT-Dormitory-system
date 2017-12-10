@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once('connect.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@ session_start();
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
 				</button>
-				<a class="navbar-brand" href="index.html"><span>SIIT Dormitory</span>Admin</a>
+				<a class="navbar-brand" href="main.php"><span>SIIT Dormitory</span>Admin</a>
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
@@ -68,6 +68,193 @@ session_start();
 				<h1 class="page-header">Booking</h1>
 			</div>
 		</div><!--content table-->
+		<div class="bootstrap-table">
+			<div class="fixed-table-toolbar">
+				<div class="columns btn-group pull-left">
+					
+					
+					<!--indent for sorting column-->
+				</div>
+			</div>
+			<div class="fixed-table-container">
+				<div class="fixed-table-header">
+					<table>
+					</table>
+				</div>
+				<div class="fixed-table-body">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th style="">
+									<div class="th-inner sortable">ID
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Gender
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Name
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Surname
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Student ID
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Curriculum
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">School
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">E-mail
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Mobile Phone
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Phone
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Option
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Friend Gender
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Friend Name
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Friend Surname
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Friend Student ID
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Friend E-mail
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Friend Mobilephone
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable"> Edit/Delete
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$q="SELECT * FROM booking";
+							$q = strtolower($q);
+							$result=$mysqli->query($q);
+							if(!$result){
+								echo "Select failed. Error: ".$mysqli->error ;
+							break;
+							}
+							while($row=$result->fetch_array()){?>
+
+							<tr data-index="0">
+								<td style=""><?=$row['bookingID']?></td>
+								<td style=""><?=$row['Gender']?></td>
+								<td style=""><?=$row['Name']?></td>
+								<td style=""><?=$row['Surname']?></td>
+								<td style=""><?=$row['Studentid']?></td>
+								<td style=""><?=$row['Curriculum']?></td>
+								<td style=""><?=$row['School']?></td>
+								<td style=""><?=$row['Email']?></td>
+								<td style=""><?=$row['Mobilephone']?></td>
+								<td style=""><?=$row['Phone']?></td>
+								<td style=""><?=$row['Option']?></td>
+								<?php
+								
+							
+							if ($row['Option'] == 1) { ?>
+
+								<td style="">None</td>
+								<td style="">None</td>
+								<td style="">None</td>
+								<td style="">None</td>
+								<td style="">None</td>
+								<td style="">None</td>
+								<td style="">None</td>
+								<?php
+							}
+							else{
+								?>
+								<td style=""><?=$row['Fgender']?></td>
+								<td style=""><?=$row['Fname']?></td>
+								<td style=""><?=$row['Fsurname']?></td>
+								<td style=""><?=$row['Fstudentid']?></td>
+								<td style=""><?=$row['Femail']?></td>
+								<td style=""><?=$row['Fmobilephone']?></td>
+								<td style="">None</td>
+							<?php }
+						}
+							$count=$result->num_rows;
+							$result->free();
+							 ?>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+
 	</div>
 	
 	<script src="js/mainjs/jquery-1.11.1.min.js"></script>

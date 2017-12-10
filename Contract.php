@@ -18,7 +18,7 @@ session_start();
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+<![endif]-->
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -52,7 +52,7 @@ session_start();
 			<li><a href="logout.php"><img src="/icon/circle.png">  Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
-		
+
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
@@ -68,7 +68,88 @@ session_start();
 				<h1 class="page-header">Contract</h1>
 			</div>
 		</div><!--content table-->
+
+		<div class="bootstrap-table">
+			<div class="fixed-table-toolbar">
+				<div class="columns btn-group pull-left">
+					
+					
+					<!--indent for sorting column-->
+				</div>
+			</div>
+			<div class="fixed-table-container">
+				<div class="fixed-table-header">
+					<table>
+					</table>
+				</div>
+				<div class="fixed-table-body">
+					<div class="fixed-table-loading" style="top: 37px; display: none;">Loading, please wait…
+					</div>
+					<table data-toggle="table" data-url="tables/data1.json" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc" class="table table-hover">
+						<thead>
+							<tr>
+								<th class="bs-checkbox " style="width: 36px; ">
+									<div class="th-inner ">
+										<input name="btSelectAll" type="checkbox">
+									</div>
+									<div class="fht-cell">
+
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Item ID
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Item Name
+										<span class="order">
+											<span class="caret" style="margin: 10px 5px;">
+
+											</span>
+										</span>
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Item Price
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-index="0">
+								<td class="bs-checkbox">
+									<input data-index="0" name="toolbar1" type="checkbox">
+								</td>
+								<td style="">9
+								</td>
+								<td style="">Item 9
+								</td><td style="">$9
+								</td>
+							</tr>
+							<tr data-index="1">
+								<td class="bs-checkbox">
+									<input data-index="1" name="toolbar1" type="checkbox">
+								</td>
+								<td style="">8
+								</td>
+								<td style="">Item 8
+								</td>
+								<td style="">$8
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	
 	<script src="js/mainjs/jquery-1.11.1.min.js"></script>
 	<script src="js/mainjs/bootstrap.min.js"></script>
