@@ -26,7 +26,7 @@ session_start();
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
 				</button>
-				<a class="navbar-brand" href="index.html"><span>SIIT Dormitory</span>Admin</a>
+				<a class="navbar-brand" href="main.php"><span>SIIT Dormitory</span>Admin</a>
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
