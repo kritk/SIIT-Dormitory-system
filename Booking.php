@@ -188,7 +188,7 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable"> Edit/Delete
+									<div class="th-inner sortable"> Edit/Delete         
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -229,7 +229,7 @@ require_once('connect.php');
 								<td style="">None</td>
 								<td style="">None</td>
 								<td style="">None</td>
-								<td style="">None</td>
+								<td style=""><button type="button" class="btn btn-danger">Delete</button></td>
 								<?php
 							}
 							else{
@@ -240,7 +240,9 @@ require_once('connect.php');
 								<td style=""><?=$row['Fstudentid']?></td>
 								<td style=""><?=$row['Femail']?></td>
 								<td style=""><?=$row['Fmobilephone']?></td>
-								<td style="">None</td>
+								<td style="">
+										<button type="button" class="btn btn-danger">Delete</button>
+								</td>
 							<?php }
 						}
 							$count=$result->num_rows;

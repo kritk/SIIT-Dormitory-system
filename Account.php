@@ -65,10 +65,24 @@ session_start();
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Account</h1>
+				<h1 class="page-header">Change Your E-mail or Password</h1>
 			</div>
 		</div><!--content table-->
+		<form action="changeac.php" method="post">
+			<div class="form-group">
+	    		<label >Your Email address</label>
+	    		<input type="text" class="form-control" placeholder="Enter email" name="newname" size="10" value="<?php echo $_SESSION["username"] ?>">
+	    		
+	  		</div>
+	  		<div class="form-group">
+	    		<label >Your Password</label>
+	    		<input type="text" class="form-control"  placeholder="Password" name="newp" size="10" value="<?php echo $_SESSION["password"] ?>">
+	    		<small>Please notice that when you click submit button, you will need to log in again !</small>
+	 	 	</div>
+	  		<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 	</div>
+	
 	
 	<script src="js/mainjs/jquery-1.11.1.min.js"></script>
 	<script src="js/mainjs/bootstrap.min.js"></script>

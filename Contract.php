@@ -67,7 +67,13 @@ session_start();
 			<div class="col-lg-12">
 				<h1 class="page-header">Contract</h1>
 			</div>
-		</div><!--content table-->
+		</div>
+		<div class="form-group">
+			<a href="createcontractin.php" class="btn btn-info" role="button">Create new contract</a>
+		</div>
+
+
+		<!--content table-->
 
 		<div class="bootstrap-table">
 			<div class="fixed-table-toolbar">

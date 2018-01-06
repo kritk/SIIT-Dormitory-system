@@ -56,7 +56,7 @@
 				</li>
 
 				<li class="nav-item active">
-					<a class="nav-link" href="booking.html">Create Booking</a>
+					<a class="nav-link" href="booking.html" >Create Booking<span class="sr-only">(current)</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="report.html">Reporting Problem</a>

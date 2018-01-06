@@ -21,9 +21,15 @@ while ($obj = mysqli_fetch_object($result)) {
  if(($iusername == $username) && ($ipassword == $password)){
  	header("Location: main.php");
  	$_SESSION["username"] = $iusername;
+ 	$_SESSION["password"] = $ipassword;
 	die();
 
  }
+ else {
+ 	header("Location: errorlogin.php");
+ 	# code...
+ }
+ 
 
 
 
