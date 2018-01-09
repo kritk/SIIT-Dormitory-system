@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once('connect.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,51 +76,137 @@ session_start();
 		<!--content table-->
 
 		<div class="bootstrap-table">
-			<div class="fixed-table-toolbar">
-				<div class="columns btn-group pull-left">
-					
-					
-					<!--indent for sorting column-->
-				</div>
-			</div>
+
 			<div class="fixed-table-container">
-				<div class="fixed-table-header">
-					<table>
-					</table>
-				</div>
+				
+				<div class="fixed-table-container">
+				
 				<div class="fixed-table-body">
-					<div class="fixed-table-loading" style="top: 37px; display: none;">Loading, please wait…
-					</div>
-					<table data-toggle="table" data-url="tables/data1.json" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc" class="table table-hover">
+					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th class="bs-checkbox " style="width: 36px; ">
-									<div class="th-inner ">
-										<input name="btSelectAll" type="checkbox">
-									</div>
-									<div class="fht-cell">
-
-									</div>
-								</th>
 								<th style="">
-									<div class="th-inner sortable">Item ID
+									<div class="th-inner sortable">ID
 									</div>
 									<div class="fht-cell">
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Item Name
-										<span class="order">
-											<span class="caret" style="margin: 10px 5px;">
-
-											</span>
-										</span>
+									<div class="th-inner sortable">Gender
 									</div>
 									<div class="fht-cell">
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Item Price
+									<div class="th-inner sortable">Name
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Surname
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Program
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">ID Card
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Birth Date
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Age
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Address
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Current Address
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Telephone
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Cellphone
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">E-mail
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">From Date
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">To Date
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Scholarship
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Discount
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable">Contract Date
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable"> Price        
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable"> Edit        
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable"> Delete        
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -128,30 +214,50 @@ session_start();
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+							$q="SELECT * FROM contract";
+							$result=$mysqli->query($q);
+							if(!$result){
+								echo "Select failed. Error: ".$mysqli->error ;
+							break;
+							}
+							while($row=$result->fetch_array()){?>
+
 							<tr data-index="0">
-								<td class="bs-checkbox">
-									<input data-index="0" name="toolbar1" type="checkbox">
-								</td>
-								<td style="">9
-								</td>
-								<td style="">Item 9
-								</td><td style="">$9
-								</td>
-							</tr>
-							<tr data-index="1">
-								<td class="bs-checkbox">
-									<input data-index="1" name="toolbar1" type="checkbox">
-								</td>
-								<td style="">8
-								</td>
-								<td style="">Item 8
-								</td>
-								<td style="">$8
-								</td>
+								<td style=""><?=$row['contractID']?></td>
+								<td style=""><?=$row['Gender']?></td>
+								<td style=""><?=$row['Name']?></td>
+								<td style=""><?=$row['Surname']?></td>
+								<td style=""><?=$row['Program']?></td>
+								<td style=""><?=$row['IDcard']?></td>
+								<td style=""><?=$row['Birthdate']?></td>
+								<td style=""><?=$row['Age']?></td>
+								<td style=""><?=$row['Address']?></td>
+								<td style=""><?=$row['Caddress']?></td>
+								<td style=""><?=$row['Telephone']?></td>
+								<td style=""><?=$row['Cellphone']?></td>
+								<td style=""><?=$row['Email']?></td>
+								<td style=""><?=$row['fromdate']?></td>
+								<td style=""><?=$row['todate']?></td>
+								<td style=""><?=$row['scholarshiptype']?></td>
+								<td style=""><?=$row['scholarshipdiscount']?></td>
+								<td style=""><?=$row['datebegincontract']?></td>
+								<td style=""><?=$row['pricetopay']?></td>
+								<td style=""><button type="button" class="btn btn-warning">Edit</button></td>
+								<td style=""><button type="button" class="btn btn-danger">Delete</button></td>
+								
+							
+							
+							<?php 
+						}
+							$count=$result->num_rows;
+							$result->free();
+							 ?>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+			</div>
 			</div>
 		</div>
 	</div>

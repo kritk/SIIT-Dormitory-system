@@ -69,29 +69,20 @@ require_once('connect.php');
 			</div>
 		</div><!--content table-->
 		<div class="bootstrap-table">
-			<div class="fixed-table-toolbar">
-				<div class="columns btn-group pull-left">
-					
-					
-					<!--indent for sorting column-->
-				</div>
-			</div>
+			
 			<div class="fixed-table-container">
-				<div class="fixed-table-header">
-					<table>
-					</table>
-				</div>
+				
 				<div class="fixed-table-body">
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th style="">
+								<th >
 									<div class="th-inner sortable">ID
 									</div>
 									<div class="fht-cell">
 									</div>
 								</th>
-								<th style="">
+								<th >
 									<div class="th-inner sortable">Gender
 									</div>
 									<div class="fht-cell">

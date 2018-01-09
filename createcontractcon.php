@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once('connect.php');
 
 
 
@@ -40,21 +40,19 @@ session_start();
   $nummonth = $_POST["nummonth"];
   $fromdate = $_POST["fromdate"];
   $todate = $_POST["todate"];
-
-  if (isset($_POST["scholarship"])) {
-    $scholarship = $_POST["scholarship"];
-    $scholarshipprice = $_POST["scholarshipprice"];
+  $scholarship = $_POST["scholarship"];
+  $scholarshipprice = $_POST["scholarshipprice"];
     # code...
-  }
+  
 
-  if (isset($_POST["fname"])) {
-    $fname = $_POST["fname"];
-    $fsurname = $_POST["fsurname"];
-    $fstudentid = $_POST["fstudentid"];
-    $fprogram = $_POST["fprogram"];
-    $fphone = $_POST["fphone"];
+  
+  $fname = $_POST["fname"];
+  $fsurname = $_POST["fsurname"];
+  $fstudentid = $_POST["fstudentid"];
+  $fprogram = $_POST["fprogram"];
+  $fphone = $_POST["fphone"];
     # code...
-  }
+  
 
   ?>
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -200,9 +198,7 @@ session_start();
                     </div>
             </div>
             <?php
-
-            if (isset($_POST["scholarship"])) {
-
+            if($scholarship !== '') {
 
               ?>
                 <div class="form-group">
@@ -219,8 +215,7 @@ session_start();
                 </div>
               <?php
             }
-
-            if (isset($_POST["fname"])) {
+            if($fname !== ''){
               
 
               ?>
@@ -259,7 +254,54 @@ session_start();
 
             }
 
+            if ($gender == 'Male') {
+               $q="SELECT roomnumber FROM room WHERE buildingtype = 'Men' GROUP BY roomnumber";
+               ?>
+               <div class="form-group">
+                        <label class="col-sm-3 control-label">Your building </label>
+                        <div class="col-sm-9">
+                           <input type="text"  value="Men" class="form-control"  readonly>
+                        </div>
+               </div>
+            <?php }
+           else{
+               $q="SELECT roomnumber FROM room WHERE buildingtype = 'Women' GROUP BY roomnumber;";
+               ?>
+               <div class="form-group">
+                        <label class="col-sm-3 control-label">Your building </label>
+                        <div class="col-sm-9">
+                           <input type="text"  value="Women" class="form-control"  readonly>
+                        </div>
+               </div>
+           <?php }
+
+           
+            $result=$mysqli->query($q);
+            if(!$result){
+                echo "Select failed. Error: ".$mysqli->error ;
+              break;}
+
+            echo '<div class="form-group">';  
+            echo '<label class="col-sm-3 control-label">Assign Room number </label>';
+            echo '<div class=" dropdown">';
+            echo '<select name="roomnumber">';
+            while($row=$result->fetch_array()){ 
+             echo '<option value="'.$row['roomnumber'].'">'.$row['roomnumber'].'</option>'; 
+          }
+            echo '</select>';
+            echo '</div>';
+            echo '</div>';
             ?>
+            <div class="form-group">
+                       <label class="col-sm-3 control-label">Room type </label>
+                      <div class=" dropdown">
+                            <select class="selectpicker" name="roomtype">
+                              <option value="A">A</option>
+                              <option value="B">B</option>
+                              <option value="AB">AB</option>
+                            </select>
+                      </div>
+            </div>
            
            
             <div class="form-group">

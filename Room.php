@@ -48,7 +48,7 @@ session_start();
 			<li class="active"><a href="Room.php"><img src="/icon/003-agenda.png">  Manage Room</a></li>
 			<li><a href="Booking.php"><img src="/icon/001-agenda-1.png">  Manage Booking</a></li>
 			<li><a href="Contract.php"><img src="/icon/004-application.png"> Manage Contract</a></li>
-			<li><a href="Report.php"><img src="/icon/002-business.png">  Report Probelm</a></li>
+			<li><a href="Report.php"><img src="/icon/002-business.png">  Manage Report</a></li>
 			<li><a href="logout.php"><img src="/icon/circle.png">  Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->

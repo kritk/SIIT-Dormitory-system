@@ -152,8 +152,8 @@ session_start();
             <div class="form-group">
                     <label class="col-sm-3 control-label">Resident Type </label>
                       <div class=" dropdown">
-                            <select class="selectpicker" name="residenttype">
-                              <option value="Type 1 The tenant intends to stay alone with the use of both A and B rooms during the rental period.">Type 1 The tenant intends to stay alone with the use of both A and B rooms during the rental period.</option>
+                            <select class="selectpicker" name="residenttype" id="myselect" onchange="displayfriend()">
+                              <option value="Type 1 The tenant intends to stay alone with the use of both A and B rooms during the rental period." selected>Type 1 The tenant intends to stay alone with the use of both A and B rooms during the rental period.</option>
                               <option value="Type 2   The tenant stays with his/her specified roommate.">Type 2   The tenant stays with his/her specified roommate.</option>
                               <option value="Type 3  The tenant stays with a roommate that the institute has assigned.">Type 3  The tenant stays with a roommate that the institute has assigned.</option>
                             </select>
@@ -189,26 +189,43 @@ session_start();
                        <input type="text"  placeholder="Please specific" class="form-control" name="scholarshipprice">
                     </div>
             </div>
-            <h2>No need to fill up when select resident type 1,3</h2>
-            <div class="form-group">
+            <script>
+            function displayfriend() {
+            var x = document.getElementById("myselect").value;
+            var y = "Type 2   The tenant stays with his/her specified roommate.";
+
+            if (x == y) {
+            document.getElementById("txt1").style.display = '';
+             
+            }
+            else{
+              document.getElementById("txt1").style.display = 'none';
+              
+            }
+            }
+            </script>
+            <body onload="displayfriend()">
+
+            <div id="txt1">
+              <div class="form-group">
                     <label class="col-sm-3 control-label">Friend Name </label>
                     <div class="col-sm-9">
-                       <input type="text"   class="form-control" name="fname">
+                       <input type="text"  placeholder="Name" class="form-control" name="fname">
                     </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                     <label class="col-sm-3 control-label">Friend Surname </label>
                     <div class="col-sm-9">
                        <input type="text"  placeholder="Surname" class="form-control" name="fsurname">
                     </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                     <label class="col-sm-3 control-label">Friend Student ID </label>
                     <div class="col-sm-9">
                        <input type="text"  placeholder="Number" class="form-control" name="fstudentid">
                     </div>
-            </div>
-            <div class="form-group" >
+              </div>
+              <div class="form-group" >
                       <label class="col-sm-3 control-label">Friend Program </label>
                       <div class=" dropdown">
                             <select class="selectpicker" name="fprogram">
@@ -223,12 +240,13 @@ session_start();
                               <option value="ME">ME</option>
                             </select>
                       </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                     <label class="col-sm-3 control-label">Friend Mobile </label>
                     <div class="col-sm-9">
                        <input type="text"  placeholder="Phone" class="form-control" name="fphone">
                     </div>
+              </div>
             </div>
             <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
