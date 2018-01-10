@@ -1001,6 +1001,16 @@ h1.page-header {
 .fixed-table-container {
   border: 1px solid #e9ecf2; }
 
+.studentidtable{
+  width: 180px;
+}
+.fromdatetable{
+  width: 90px;
+}
+.contractdatetable{
+   width: 120px;
+}
+
 .fixed-table-container thead th {
   background: #f7f7f8;
   border-color: #ddd;

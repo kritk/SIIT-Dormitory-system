@@ -108,41 +108,12 @@ session_start();
                       </div>
             </div>
             <div class="form-group">
-                    <label class="col-sm-3 control-label">National Identify Card</label>
+                    <label class="col-sm-3 control-label">Student ID</label>
                     <div class="col-sm-9">
-                        <input type="text"  placeholder="Or passport" class="form-control" name="idcard">
+                        <input type="text"  placeholder="Or other" class="form-control" name="idcard">
                     </div>
             </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Date of birth</label>
-                    <div class="col-sm-9">
-                       <input class="form-control" type="date" value="2018-01-01" name="birthdate">
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Age</label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="number" class="form-control" name="age">
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Adress 1 </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="Address" class="form-control" name="address1">
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Adress 2 </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="Or currently address" class="form-control" name="address2">
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Telephone </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="number" class="form-control" name="tel">
-                    </div>
-            </div>
+            
             <div class="form-group">
                     <label class="col-sm-3 control-label">E-mail </label>
                     <div class="col-sm-9">

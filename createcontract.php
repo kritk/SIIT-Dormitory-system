@@ -1,3 +1,23 @@
+<?php
+session_start();
+require_once('connect.php');
+$studentid = $_SESSION["studentid"];
+
+$q = "SELECT * FROM booking WHERE Studentid = '$studentid' ";
+
+$result = $mysqli->query($q);
+if(!$result){
+echo "Select failed. Error: ".$mysqli->error ;
+}
+while ($obj = mysqli_fetch_object($result)) {
+        $name = $obj->Name;
+        $surname = $obj->Surname;
+        $email = $obj->Email;
+        $mobilephone = $obj->Mobilephone;
+        $phone = $obj->Phone;
+    }
+
+?>
 <html lang="en">
   <head>
     <title>Contract</title>
@@ -28,20 +48,20 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="#">Home</a>
               </li>
 
                <li class="nav-item active">
                 <a class="nav-link" href="#">Create Contract <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="booking.html">Create Booking</a>
+                <a class="nav-link" href="#">Create Booking</a>
               </li>
                <li class="nav-item">
-                <a class="nav-link" href="report.html">Reporting Problem</a>
+                <a class="nav-link" href="#">Reporting Problem</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact us</a>
+                <a class="nav-link" href="#">Contact us</a>
               </li>
              
 
@@ -63,11 +83,11 @@
           <div class="form-inline ">
                     <div class="form-group" >
                       <label >Name(ชื่อ):</label>
-                      <input type="text" class="form-control" size="20" name="Cname" id="name">
+                      <input type="text" class="form-control" size="20" name="Cname" value="<?php echo $name ?>" id="name">
                     </div>
                     <div class="form-group" >
                       <label >Surname(นามสกุล):</label>
-                      <input type="text" class="form-control"  size="25" name="Csurname" id="surname">
+                      <input type="text" class="form-control"  size="25" name="Csurname" value="<?php echo $surname ?>" id="surname">
                     </div>
 
 
@@ -94,6 +114,12 @@
             <div class="form-group" >
                       <label >National Identify Card/Passport(for foreign students) number :</label>
                       <input type="text" class="form-control" size="15" name="Cidcard" id="idcard">
+            </div>
+          </div>
+           <div  class="form-inline ">
+            <div class="form-group" >
+                      <label >Student ID :</label>
+                      <input type="text" class="form-control" size="15" value="<?php echo $studentid ?>" name="studentid" id="idcard">
             </div>
           </div>
           <div class="form-inline ">
@@ -129,18 +155,18 @@
           <div class="form-inline ">
                         <div class="form-group" >
                           <label >Telephone :</label>
-                          <input type="text" class="form-control" size="20" name="Ctel" id="name">
+                          <input type="text" class="form-control" size="20" value="<?php echo $phone ?>" name="Ctel" id="name">
                         </div>
                         <div class="form-group" >
                           <label >Cell phone :</label>
-                          <input type="text" class="form-control"  size="15" name="Cmobile" id="cphone">
+                          <input type="text" class="form-control"  size="15" value="<?php echo $mobilephone ?>" name="Cmobile" id="cphone">
                         </div>
 
           </div>
           <div class="form-inline ">
                         <div class="form-group" >
                           <label >E-mail :</label>
-                          <input type="text" class="form-control"  size="25" name="Cemail" id="email">
+                          <input type="text" class="form-control"  size="25" value="<?php echo $email ?>" name="Cemail" id="email">
                         </div>
           </div>
           <div>

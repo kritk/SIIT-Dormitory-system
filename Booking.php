@@ -101,7 +101,7 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Student ID
+									<div class="th-inner sortable contractdatetable">Student ID
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -125,7 +125,7 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Mobile Phone
+									<div class="th-inner sortable contractdatetable">Mobile Phone
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -161,7 +161,7 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Friend Student ID
+									<div class="th-inner sortable studentidtable">Friend Student ID
 									</div>
 									<div class="fht-cell">
 									</div>

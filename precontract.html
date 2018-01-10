@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <title>Report</title>
+    <title>Contract</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootcss/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/report.css">
+    <link rel="stylesheet" type="text/css" href="css/precontract.css">
 
   </head>
   <body>
@@ -29,15 +29,15 @@
                 <a class="nav-link" href="index.html">Home</a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="contract.html">Create Contract</a>
+              <li class="nav-item active">
+                <a class="nav-link" >Create Contract <span class="sr-only">(current)</span></a>
               </li>
 
               <li class="nav-item">
                 <a class="nav-link" href="booking.html">Create Booking</a>
               </li>
-               <li class="nav-item active">
-                <a class="nav-link" href="#">Reporting Problem <span class="sr-only">(current)</span></a>
+               <li class="nav-item">
+                <a class="nav-link" href="report.html">Reporting Problem </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact us</a>
@@ -53,7 +53,7 @@
 
 
   <div class="backgroundmain">
-    <form action="prereport.php" method="post">
+    <form action="checkcreatecontract.php" method="post">
       <div class="prereportform">
         <div>
           <h2>Please fill your student ID</h2>
@@ -61,8 +61,14 @@
         <div class="form-inline">
           <div class="form-group" >
             <label>Your student ID :  </label>
-            <input type="text" class="form-control" size="15" id="name">
+            <input type="text" class="form-control" size="15" name="studentid">
           </div>
+         
+        </div>
+        <div>
+                <div class ="button2">
+                <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
         </div>
       </div>
     </form>         

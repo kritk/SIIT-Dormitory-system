@@ -85,17 +85,20 @@ require_once('connect.php');
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th style="">
-									<div class="th-inner sortable">ID
+								<th >
+									<div class="th-inner sortable ">
+									ID
 									</div>
 									<div class="fht-cell">
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Gender
+									<div class="th-inner sortable">
+									Gender
 									</div>
 									<div class="fht-cell">
 									</div>
+
 								</th>
 								<th style="">
 									<div class="th-inner sortable">Name
@@ -115,38 +118,8 @@ require_once('connect.php');
 									<div class="fht-cell">
 									</div>
 								</th>
-								<th style="">
-									<div class="th-inner sortable">ID Card
-									</div>
-									<div class="fht-cell">
-									</div>
-								</th>
-								<th style="">
-									<div class="th-inner sortable">Birth Date
-									</div>
-									<div class="fht-cell">
-									</div>
-								</th>
-								<th style="">
-									<div class="th-inner sortable">Age
-									</div>
-									<div class="fht-cell">
-									</div>
-								</th>
-								<th style="">
-									<div class="th-inner sortable">Address
-									</div>
-									<div class="fht-cell">
-									</div>
-								</th>
-								<th style="">
-									<div class="th-inner sortable">Current Address
-									</div>
-									<div class="fht-cell">
-									</div>
-								</th>
-								<th style="">
-									<div class="th-inner sortable">Telephone
+								<th class="">
+									<div class="th-inner sortable studentidtable">Student ID or other
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -164,16 +137,14 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">From Date
+									<div class="th-inner sortable fromdatetable">From Date YY/MM/DD
 									</div>
-									<div class="fht-cell">
-									</div>
+									
 								</th>
 								<th style="">
-									<div class="th-inner sortable">To Date
+									<div class="th-inner sortable fromdatetable">To Date YY/MM/DD
 									</div>
-									<div class="fht-cell">
-									</div>
+									
 								</th>
 								<th style="">
 									<div class="th-inner sortable">Scholarship
@@ -188,7 +159,7 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">Contract Date
+									<div class="th-inner sortable contractdatetable">Contract Date YY/MM/DD
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -229,12 +200,7 @@ require_once('connect.php');
 								<td style=""><?=$row['Name']?></td>
 								<td style=""><?=$row['Surname']?></td>
 								<td style=""><?=$row['Program']?></td>
-								<td style=""><?=$row['IDcard']?></td>
-								<td style=""><?=$row['Birthdate']?></td>
-								<td style=""><?=$row['Age']?></td>
-								<td style=""><?=$row['Address']?></td>
-								<td style=""><?=$row['Caddress']?></td>
-								<td style=""><?=$row['Telephone']?></td>
+								<td style=""><?=$row['studentID']?></td>
 								<td style=""><?=$row['Cellphone']?></td>
 								<td style=""><?=$row['Email']?></td>
 								<td style=""><?=$row['fromdate']?></td>
@@ -256,6 +222,7 @@ require_once('connect.php');
 							</tr>
 						</tbody>
 					</table>
+				</div>
 				</div>
 			</div>
 			</div>
