@@ -93,8 +93,8 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th style="">
-									<div class="th-inner sortable">
-									Gender
+									<div class="th-inner sortable contractdatetable ">
+									Student ID 
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -119,7 +119,7 @@ require_once('connect.php');
 									</div>
 								</th>
 								<th class="">
-									<div class="th-inner sortable studentidtable">Student ID or other
+									<div class="th-inner sortable studentidtable">ID card or passport
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -147,6 +147,18 @@ require_once('connect.php');
 									
 								</th>
 								<th style="">
+									<div class="th-inner sortable">Month
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
+									<div class="th-inner sortable studentidtable">Resident Type
+									</div>
+									<div class="fht-cell">
+									</div>
+								</th>
+								<th style="">
 									<div class="th-inner sortable">Scholarship
 									</div>
 									<div class="fht-cell">
@@ -160,12 +172,6 @@ require_once('connect.php');
 								</th>
 								<th style="">
 									<div class="th-inner sortable contractdatetable">Contract Date YY/MM/DD
-									</div>
-									<div class="fht-cell">
-									</div>
-								</th>
-								<th style="">
-									<div class="th-inner sortable"> Price        
 									</div>
 									<div class="fht-cell">
 									</div>
@@ -193,41 +199,51 @@ require_once('connect.php');
 							break;
 							}
 							while($row=$result->fetch_array()){?>
+							<form method="post" action="main.php">
+								<tr data-index="0">
+									<td style=""><?=$row['contractID']?></td>
+									<td style=""><?=$row['studentID']?></td>
+									<td style=""><?=$row['Name']?></td>
+									<td style=""><?=$row['Surname']?></td>
+									<td style=""><?=$row['Program']?></td>
+									<td style=""><?=$row['IDcard']?></td>
+									<td style=""><?=$row['Cellphone']?></td>
+									<td style=""><?=$row['Email']?></td>
+									<td style=""><?=$row['fromdate']?></td>
+									<td style=""><?=$row['todate']?></td>
+									<td style=""><?=$row['Nummonth']?></td>
+									<td style=""><?=$row['Residenttype']?></td>
+									<td style=""><?=$row['scholarshiptype']?></td>
+									<td style=""><?=$row['scholarshipdiscount']?></td>
+									<td style=""><?=$row['datebegincontract']?></td>
+									<td style=""><input type="submit" class="btn btn-warning" value="main.php">Edit</td>
+									<td style=""><input type="submit" class="btn btn-danger" value="Booking.php">Delete</td>
 
-							<tr data-index="0">
-								<td style=""><?=$row['contractID']?></td>
-								<td style=""><?=$row['Gender']?></td>
-								<td style=""><?=$row['Name']?></td>
-								<td style=""><?=$row['Surname']?></td>
-								<td style=""><?=$row['Program']?></td>
-								<td style=""><?=$row['studentID']?></td>
-								<td style=""><?=$row['Cellphone']?></td>
-								<td style=""><?=$row['Email']?></td>
-								<td style=""><?=$row['fromdate']?></td>
-								<td style=""><?=$row['todate']?></td>
-								<td style=""><?=$row['scholarshiptype']?></td>
-								<td style=""><?=$row['scholarshipdiscount']?></td>
-								<td style=""><?=$row['datebegincontract']?></td>
-								<td style=""><?=$row['pricetopay']?></td>
-								<td style=""><button type="button" class="btn btn-warning">Edit</button></td>
-								<td style=""><button type="button" class="btn btn-danger">Delete</button></td>
-								
-							
-							
+									<script>
+										// Jquery event-handlers are automatically bound to
+										// the element selected, so using "this" is safe
+										function modifyAction(e) {
+										    this.form.action = this.value;
+										}
+
+										// Bind the click-event on all input with type=submit
+										$("input[type=submit]").click(modifyAction);
+									</script>
 							<?php 
 						}
 							$count=$result->num_rows;
 							$result->free();
 							 ?>
-							</tr>
+								</tr>
+							</form>
 						</tbody>
 					</table>
 				</div>
 				</div>
 			</div>
-			</div>
 		</div>
 	</div>
+	
 
 	
 	<script src="js/mainjs/jquery-1.11.1.min.js"></script>

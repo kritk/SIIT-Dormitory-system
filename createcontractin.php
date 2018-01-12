@@ -110,6 +110,12 @@ session_start();
             <div class="form-group">
                     <label class="col-sm-3 control-label">Student ID</label>
                     <div class="col-sm-9">
+                        <input type="text"  placeholder="Or other" class="form-control" name="studentid">
+                    </div>
+            </div>
+              <div class="form-group">
+                    <label class="col-sm-3 control-label">ID card or passport</label>
+                    <div class="col-sm-9">
                         <input type="text"  placeholder="Or other" class="form-control" name="idcard">
                     </div>
             </div>
@@ -118,6 +124,12 @@ session_start();
                     <label class="col-sm-3 control-label">E-mail </label>
                     <div class="col-sm-9">
                        <input type="text"  placeholder="mail" class="form-control" name="mail">
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="col-sm-3 control-label">Mobile phone </label>
+                    <div class="col-sm-9">
+                       <input type="text"  placeholder="number" class="form-control" name="telephone">
                     </div>
             </div>
             <div class="form-group">
@@ -155,7 +167,7 @@ session_start();
                     </div>
             </div>
             <div class="form-group">
-                    <label class="col-sm-3 control-label">Price reduce by scholarship</label>
+                    <label class="col-sm-3 control-label">Discount by scholarship</label>
                     <div class="col-sm-9">
                        <input type="text"  placeholder="Please specific" class="form-control" name="scholarshipprice">
                     </div>
@@ -177,48 +189,7 @@ session_start();
             </script>
             <body onload="displayfriend()">
 
-            <div id="txt1">
-              <div class="form-group">
-                    <label class="col-sm-3 control-label">Friend Name </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="Name" class="form-control" name="fname">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label class="col-sm-3 control-label">Friend Surname </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="Surname" class="form-control" name="fsurname">
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label class="col-sm-3 control-label">Friend Student ID </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="Number" class="form-control" name="fstudentid">
-                    </div>
-              </div>
-              <div class="form-group" >
-                      <label class="col-sm-3 control-label">Friend Program </label>
-                      <div class=" dropdown">
-                            <select class="selectpicker" name="fprogram">
-                              <option value="Che">ChE</option>
-                              <option value="CE">CE</option>
-                              <option value="CPE">CPE</option>
-                              <option value="EC">EC</option>
-                              <option value="EM">EM</option>
-                              <option value="IE">IE</option>
-                              <option value="IT">IT</option>
-                              <option value="MT">MT</option>
-                              <option value="ME">ME</option>
-                            </select>
-                      </div>
-              </div>
-              <div class="form-group">
-                    <label class="col-sm-3 control-label">Friend Mobile </label>
-                    <div class="col-sm-9">
-                       <input type="text"  placeholder="Phone" class="form-control" name="fphone">
-                    </div>
-              </div>
-            </div>
+           
             <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
                         <button type="submit" class="btn btn-primary btn-block">Next</button>

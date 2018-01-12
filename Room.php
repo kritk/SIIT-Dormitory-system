@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once('connect.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,6 +68,140 @@ session_start();
 				<h1 class="page-header">Room</h1>
 			</div>
 		</div><!--content table-->
+		<div class="form-group">
+			<a href="" class="btn btn-info" role="button">Assign room to new contract</a>
+		</div>
+		<form action="" method="post">
+			<div class="bootstrap-table">
+
+				<div class="fixed-table-container">
+					
+					<div class="fixed-table-container">
+					
+					<div class="fixed-table-body">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th >
+										<div class="th-inner sortable ">
+									 Number
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable ">
+										Room 
+										</div>
+										<div class="fht-cell">
+										</div>
+
+									</th>
+									<th style="">
+										<div class="th-inner sortable contractdatetable">Student ID
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable">Name
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable">Surname
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th class="">
+										<div class="th-inner sortable">fromdate YY/MM/DD
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable">todate YY/MM/DD
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable ">Electricity 
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable ">Water 
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable">Price
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+									<th style="">
+										<div class="th-inner sortable"> Edit        
+										</div>
+										<div class="fht-cell">
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php
+								$q="SELECT room.roomnumber, room.roomtype, contract.name, contract.surname, contract.fromdate, contract.todate, contract.studentID, room.electricity, room.water, room.price
+	  								FROM contract
+	  								INNER JOIN  room ON room.contractID = contract.contractID";
+								$result=$mysqli->query($q);
+								if(!$result){
+									echo "Select failed. Error: ".$mysqli->error ;
+								break;
+								}
+								while($row=$result->fetch_array()){?>
+								<form method="post" action="main.php">
+									<tr data-index="0">
+										<td style=""><?=$row['roomnumber']?></td>
+										<td style=""><?=$row['roomtype']?></td>
+										<td style=""><?=$row['studentID']?></td>
+										<td style=""><?=$row['name']?></td>
+										<td style=""><?=$row['surname']?></td>
+										<td style=""><?=$row['fromdate']?></td>
+										<td style=""><?=$row['todate']?></td>
+										<td style=""><?=$row['electricity']?></td>
+										<td style=""><?=$row['water']?></td>
+										<td style=""><?=$row['price']?></td>
+										<td style=""><input type="submit" class="btn btn-warning" value="main.php">Edit</td>
+										
+										<script>
+											// Jquery event-handlers are automatically bound to
+											// the element selected, so using "this" is safe
+											function modifyAction(e) {
+											    this.form.action = this.value;
+											}
+
+											// Bind the click-event on all input with type=submit
+											$("input[type=submit]").click(modifyAction);
+										</script>
+								<?php 
+							}
+								$count=$result->num_rows;
+								$result->free();
+								 ?>
+									</tr>
+								</form>
+							</tbody>
+						</table>
+					</div>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
 	
 	<script src="js/mainjs/jquery-1.11.1.min.js"></script>

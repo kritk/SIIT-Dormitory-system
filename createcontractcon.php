@@ -30,12 +30,9 @@ require_once('connect.php');
   $surname = $_POST["surname"];
   $program = $_POST["program"];
   $idcard = $_POST["idcard"];
-  $birthdate = $_POST["birthdate"];
-  $age = $_POST["age"];
-  $address1 = $_POST["address1"];
-  $address2 = $_POST["address2"];
-  $tel = $_POST["tel"];
+  $studentid = $_POST["studentid"];
   $mail = $_POST["mail"];
+  $cellphone = $_POST["telephone"];
   $residenttype = $_POST["residenttype"];
   $nummonth = $_POST["nummonth"];
   $fromdate = $_POST["fromdate"];
@@ -46,11 +43,7 @@ require_once('connect.php');
   
 
   
-  $fname = $_POST["fname"];
-  $fsurname = $_POST["fsurname"];
-  $fstudentid = $_POST["fstudentid"];
-  $fprogram = $_POST["fprogram"];
-  $fphone = $_POST["fphone"];
+  
     # code...
   
 
@@ -96,24 +89,24 @@ require_once('connect.php');
 				</li>
 				<li class="active"><a href="Contract.php">Manage contract</a></li>
 				<li class="active"><a href="createcontractin.php">Create contract</a></li>
-        <li class="active">Assign room</li>
+        <li class="active">Check Information</li>
 			</ol>
 		</div><!--bar top-->
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Assign Room</h1>
+				<h1 class="page-header">Check Information</h1>
 			</div>
 		</div><!--content table-->
 		<!--form begin here-->
-		<form class="form-horizontal" action="" method="post">
+		<form class="form-horizontal" action="savecontracttodb.php" method="post">
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Gender</label>
 				<div class="col-sm-9">
-                        <input type="text"  value="<?php echo $gender ?>" class="form-control" name="name" readonly>
-        </div>
+                        <input type="text"  value="<?php echo $gender ?>" class="form-control" name="gender" readonly>
+        		</div>
 			</div>
-			      <div class="form-group">
+			<div class="form-group">
                     <label class="col-sm-3 control-label">Firstname</label>
                     <div class="col-sm-9">
                         <input type="text"  value="<?php echo $name ?>" class="form-control" name="name" readonly>
@@ -138,39 +131,21 @@ require_once('connect.php');
                     </div>
             </div>
             <div class="form-group">
-                    <label class="col-sm-3 control-label">Date of birth</label>
+                    <label class="col-sm-3 control-label">Student ID</label>
                     <div class="col-sm-9">
-                       <input class="form-control" type="date" value="<?php echo $birthdate ?>" name="birthdate" readonly>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Age</label>
-                    <div class="col-sm-9">
-                       <input type="text" value="<?php echo $age ?>" class="form-control" name="age" readonly>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Adress 1 </label>
-                    <div class="col-sm-9">
-                       <input type="text"  value="<?php echo $address1 ?>" class="form-control" name="address1" readonly>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Adress 2 </label>
-                    <div class="col-sm-9">
-                       <input type="text"  value="<?php echo $address2 ?>" class="form-control" name="address2" readonly>
-                    </div>
-            </div>
-            <div class="form-group">
-                    <label class="col-sm-3 control-label">Telephone </label>
-                    <div class="col-sm-9">
-                       <input type="text"  value="<?php echo $tel ?>" class="form-control" name="tel" readonly>
+                        <input type="text"  value="<?php echo $studentid ?>" class="form-control" name="studentid" readonly>
                     </div>
             </div>
             <div class="form-group">
                     <label class="col-sm-3 control-label">E-mail </label>
                     <div class="col-sm-9">
                        <input type="text" value="<?php echo $mail ?>" class="form-control" name="mail" readonly>
+                    </div>
+            </div>
+             <div class="form-group">
+                    <label class="col-sm-3 control-label">Mobile Phone </label>
+                    <div class="col-sm-9">
+                       <input type="text" value="<?php echo $cellphone ?>" class="form-control" name="cellphone" readonly>
                     </div>
             </div>
             <div class="form-group">
@@ -215,98 +190,10 @@ require_once('connect.php');
                 </div>
               <?php
             }
-            if($fname !== ''){
-              
-
               ?>
-                <div class="form-group">
-                        <label class="col-sm-3 control-label">Friend Name </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="<?php echo $fname ?>" class="form-control" name="fname" readonly>
-                        </div>
-                </div>
-                <div class="form-group">
-                        <label class="col-sm-3 control-label">Friend Surname </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="<?php echo $fsurname ?>" class="form-control" name="fsurname" readonly>
-                        </div>
-                </div>
-                <div class="form-group">
-                        <label class="col-sm-3 control-label">Friend Student ID </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="<?php echo $fstudentid ?>" class="form-control" name="fstudentid" readonly>
-                        </div>
-                </div>
-                <div class="form-group" >
-                        <label class="col-sm-3 control-label">Friend Program </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="<?php echo $fprogram ?>" class="form-control" name="fprogram" readonly>
-                        </div>
-                </div>
-                <div class="form-group">
-                        <label class="col-sm-3 control-label">Friend Mobile </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="<?php echo $fphone ?>" class="form-control" name="fphone" readonly>
-                        </div>
-                </div>
-
-              <?php
-
-            }
-
-            if ($gender == 'Male') {
-               $q="SELECT roomnumber FROM room WHERE buildingtype = 'Men' GROUP BY roomnumber";
-               ?>
-               <div class="form-group">
-                        <label class="col-sm-3 control-label">Your building </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="Men" class="form-control"  readonly>
-                        </div>
-               </div>
-            <?php }
-           else{
-               $q="SELECT roomnumber FROM room WHERE buildingtype = 'Women' GROUP BY roomnumber;";
-               ?>
-               <div class="form-group">
-                        <label class="col-sm-3 control-label">Your building </label>
-                        <div class="col-sm-9">
-                           <input type="text"  value="Women" class="form-control"  readonly>
-                        </div>
-               </div>
-           <?php }
-
-           
-            $result=$mysqli->query($q);
-            if(!$result){
-                echo "Select failed. Error: ".$mysqli->error ;
-              break;}
-
-            echo '<div class="form-group">';  
-            echo '<label class="col-sm-3 control-label">Assign Room number </label>';
-            echo '<div class=" dropdown">';
-            echo '<select name="roomnumber">';
-            while($row=$result->fetch_array()){ 
-             echo '<option value="'.$row['roomnumber'].'">'.$row['roomnumber'].'</option>'; 
-          }
-            echo '</select>';
-            echo '</div>';
-            echo '</div>';
-            ?>
-            <div class="form-group">
-                       <label class="col-sm-3 control-label">Room type </label>
-                      <div class=" dropdown">
-                            <select class="selectpicker" name="roomtype">
-                              <option value="A">A</option>
-                              <option value="B">B</option>
-                              <option value="AB">AB</option>
-                            </select>
-                      </div>
-            </div>
-           
-           
             <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <button type="submit" class="btn btn-primary btn-block">Confirm</button>
+                        <button type="submit" class="btn btn-primary btn-block">Confirm and Save</button>
                     </div>
             </div>
 		</form>

@@ -24,9 +24,11 @@ if (isset($_POST["fgender"])) {
 
 	# code...
 	$q = "INSERT INTO booking (Gender, Name, Surname, Studentid, Curriculum, School, Email, Mobilephone, Phone, Option, Fgender, Fname, Fsurname, Fstudentid, Femail, Fmobilephone) VALUES ('$gender', '$namer', '$surnamer', '$studentidr', '$curriculumr', '$school', '$emailr', '$mphoner', '$phoner', '$option', '$fgender', '$fname', '$fsurname', '$fstudentid', '$femail', '$fmphone')";
+	header("Location: index.html");
 }
 else{
 	$q = "INSERT INTO booking (Gender, Name, Surname, Studentid, Curriculum, School, Email, Mobilephone, Phone, Option) VALUES ('$gender', '$namer', '$surnamer', '$studentidr', '$curriculumr', '$school', '$emailr', '$mphoner', '$phoner', '$option')";
+	header("Location: index.html");
 }
 
  
@@ -35,5 +37,5 @@ else{
 if(!$result){
 echo "Select failed. Error: ".$mysqli->error ;
 }
-echo $_POST["namer"];
+
  ?>
